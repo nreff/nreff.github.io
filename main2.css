@@ -1,0 +1,76 @@
+.contactinfo {
+color:#ffc726;
+margin-left : 15px;
+margin-top : 15px;
+background-color : #00533e;
+border : 2px solid #668d3c;
+height : 225px;
+width : 375px;
+float : left;
+text-align : left;
+font-family : times;
+font-size : medium;
+}
+.contactinfo a {
+color:#ffc726;
+text-decoration : none;
+}
+.pic {
+border : 2px solid #668d3c;
+width : 375px;
+height : 225px;
+margin-left : 30px;
+margin-top : 15px;
+}
+.myname {
+font-family : times;
+font-variant : small-caps;
+font-weight : 300;
+font-size: 130%;
+margin-top : 0px;
+margin-left: 30px;
+}
+.cinfo {
+font-family : times;
+margin-top : 0;
+margin-left: 30px;
+}
+.section {
+color:#ffc726;
+margin-left : 15px;
+margin-right : 1px;
+width : 711px;
+background-color : #00533e;
+border : 2px solid #668d3c;
+padding-left : 1.2em;
+padding-right : 1.85em;
+padding-top : 2px;
+padding-bottom : 2px;
+font-family : times;
+font-size : 150%;
+}
+.section b {
+font-variant : small-caps;
+font-weight : 300;
+}
+.sub {
+margin-left : 15px;
+margin-right : 1px;
+font-family : times;
+font-size : 100%;
+max-width : 1500px;
+padding-left : 1em;
+padding-right : 1em;
+padding-top : 0px;
+padding-bottom : 0px;
+}
+.sub td {
+text-align : center;
+}
+.sub a {
+text-decoration : none;
+}
+
+
+
+
