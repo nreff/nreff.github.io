@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>Math 371</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+@import "m371.css";
+/*]]>*/
+</style>
+
+<style type="text/css">
+/*<![CDATA[*/
+ body {
+  background-color: #FFFFFF;
+ }
+ span.c1 {font-size: 80%}
+/*]]>*/
+</style>
+</head><body>
+<h1 class="mhead">Math 371-4 - Ordinary Differential Equations - Fall 2011</h1>
+<div id="container"><br>
+<!--<div class="info2">
+<table>
+<tbody>
+<tr>
+<td><b>Prerequisite:</b> You <u>absolutely</u> must have a passing grade in MATH 222 (CALCULUS II) to be in this course.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>-->
+<div class="info">
+<table>
+<tbody>
+<tr>
+<td><b>Instructor:</b> Nate Reff</td>
+</tr>
+<tr>
+<td><b>Office:</b> LN G99B</td>
+</tr>
+<tr>
+<td><b>Email:</b> reff at math dot binghamton dot edu</td>
+</tr>
+<tr>
+<td colspan="2"><b>Course Meetings:</b> TR 8:00-9:55 in S1 140</td>
+</tr>
+<tr>
+<td><b>Office Hours:</b> T 12:00-12:30, T 2:30-3:00, W 9:00-11:00 in LN 2408A</td>
+</tr>
+<tr>
+<td><b>Help Room Schedule:</b> <a 
+href="HelpRoomFall2011.pdf">pdf</a></td>
+</tr>
+<tr>
+<td><b>Textbook:</b> <em>Advanced Engineering Mathematics, 4th Ed.</em>, by D. Zill and W. Wright <span class="c1">(ISBN-13: 978-0763779665), <a 
+href="http://books.google.com/books?id=qh1W-1nwUsEC&lpg=PP1&dq=advanced%20engineering%20mathematics&pg=PP1#v=onepage&q&f=false">Google Preview</a>.</span></td> 
+</tr>
+<tr>
+<td><b>Coordinator:</b>  <a 
+href="http://www.math.binghamton.edu/xxu/">Prof. Xu</a></td>
+</tr>
+<tr>
+<tr>
+<td><b>Syllabus:</b> <a 
+href="m371.pdf">pdf</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+
+<div class="info">
+<b>Class Material</b>
+<table width="70%">
+<tbody><tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td>
+<li><a href="hw/">Homework</a>
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="quiz/">Quizzes</a>
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="files/DiffEqIntroPrint.pdf">Course Appetizer</a>
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="files/ApproxSched.pdf">Course Schedule (Approximation)</a>
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="files/MidtermTopics.pdf">Midterm Topics</a>
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="files/MidtermReview-371.pdf">Midterm Review</a> (from Prof. Xu)
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="files/MidtermMath371Questions.pdf">Midterm Review Questions (slides).</a> Printable version <a href="files/MidtermMath371QuestionsPrintable.pdf">here</a>. 
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="files/MATH371midterm-sample.pdf">Midterm Sample Questions.</a> (from Prof. Xu)
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="files/MATH371LaplaceFormulas.pdf">Laplace Formula Sheet.</a>
+</li>
+</td>
+</tr>
+</tbody></table>
+</div>
+<br>
+<div class="info">
+<b>Calendar</b>
+<table width="70%">
+<tbody><tr>
+<th> </th>
+<th> </th>
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ccccff&amp;src=d1utqfje4jjm6g7n9oc5ckhaeg%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FNew_York" style=" border-width:0 " width="99%" height="300" frameborder="0" scrolling="no"></iframe>
+</tbody></table>
+</div>
+<br>
+
+<div class="info">
+<b>Prerequisite Resources</b>
+<table width="70%">
+<tbody><tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td> <li><a 
+href="http://www.math.binghamton.edu/grads/kaminski/Math222_Spring10/oldexams.html">Old BU Calculus 2 Exams</a> (From Jackie Kaminski's Website)</li></td>
+</tr>
+<tr>
+<td> <li><a 
+href="http://tutorial.math.lamar.edu/pdf/Calculus_Cheat_Sheet_Integrals_Reduced.pdf">Integration</a> (Paul Dawkins @ Lamar)</li></td>
+</tr>
+<tr>
+<td> <li>Practice:<a 
+href="http://www.math.binghamton.edu/grads/kaminski/Math371_Fall10/IntegralSheet.pdf">1</a>, <a 
+href="http://www.math.binghamton.edu/grads/kaminski/Math222_Spring10/Sect8.5_BigBadIntegrals.pdf">2</a>, <a 
+href="http://www.math.binghamton.edu/grads/kaminski/Math371_Fall10/IntegralSheet.pdf">3</a>; even more <a 
+href="http://www.math.binghamton.edu/grads/kaminski/Math371_Fall10/prereq.html">here</a> (Jackie Kaminski)</li></td>
+</tr>
+<tr>
+<td> <li><a 
+href="http://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet_Reduced.pdf">Trig</a> (Paul Dawkins @ Lamar)</li></td>
+</tr>
+<tr>
+<td> <li><a 
+href="http://tutorial.math.lamar.edu/pdf/Algebra_Cheat_Sheet_Reduced.pdf">Algebra</a> (Paul Dawkins @ Lamar)</li></td>
+</tr>
+
+</tbody></table>
+</div>
+ 
+<br /> 
+
+<div class="info">
+<b>Additional Resources</b>
+<table width="70%">
+<tbody><tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td> <li><a 
+href="http://ocw.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/">Differential Equations</a> @ MIT OCW (Has video 
+lectures)</li></td>
+</tr>
+<tr>
+<td> <li><a 
+href="http://tutorial.math.lamar.edu/Classes/DE/DE.aspx">Differential Equations</a>, Paul's Online Math Notes (Paul Dawkins @ Lamar) </li></td>
+</tr>
+<tr>
+<td> <li><a 
+href="http://cauchy.math.okstate.edu/~binegar/2233/2233-lec.html">Differential Equations</a>  @ Oklahoma State</li></td>
+</tr>
+<tr>
+<td> <li><a 
+href="http://www.uccs.edu/~math/vidarchive.html">UCCS Math Courses</a>, Requires Registration.  They have several introductory courses in differential equations.</li></td>
+</tr>
+</tbody></table>
+</div>
+ 
+<br /> 
+ 
+<div class="info"> 
+<b>Other Educational Resources</b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+ 
+<tr> 
+<td> <li>In 2002 MIT launched the OpenCourseWare (OCW) website: <a 
+href="http://ocw.mit.edu/">ocw.mit.edu</a>.  The basic concept was to 
+make educational material freely available to the public.  Since its 
+inception many (over 200 or so) other universities have adopted the 
+principles and created there own OCW projects.  See the <a 
+href="http://www.ocwconsortium.org/">OpenCourseWare Consortium</a> 
+website. 
+ 
+<tr> 
+<td><li> Another website which offers free online video lectures is <a 
+href="http://academicearth.org/">Academic Earth</a>. </li></td> 
+</tr> 
+<tr> 
+<td><li> iTunes U, which is part of the iTunes Store is also another 
+large collection of free educational media.</li></td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br> 
+
+<script type="text/javascript">
+var sc_project=7446972; 
+var sc_invisible=1; 
+var sc_security="77ce828c"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="free hit
+counters" href="http://statcounter.com/free-hit-counter/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/7446972/0/77ce828c/1/"
+alt="free hit counters"></a></div></noscript>
+
+</div></body></html>

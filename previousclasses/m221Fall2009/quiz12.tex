@@ -1,0 +1,70 @@
+\documentclass[10pt]{exam}
+
+\usepackage{amsmath,amssymb,amsfonts}
+
+
+\let\oldsqrt\sqrt
+% it defines the new \sqrt in terms of the old one
+\def\sqrt{\mathpalette\DHLhksqrt}
+\def\DHLhksqrt#1#2{\setbox0=\hbox{$#1\oldsqrt{#2\,}$}\dimen0=\ht0
+\advance\dimen0-0.2\ht0
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+
+\oddsidemargin=0in
+\evensidemargin=0in
+\textwidth=6.3in
+\topmargin=-0.5in
+\textheight=9in
+
+\parindent=0in
+\pagestyle{empty}
+\pointsinmargin
+\boxedpoints
+\begin{document}
+
+%%%(change to appropriate class and semester)
+Math 221 Fall 2009 \\
+$11/17/2009$
+
+%%%(change to appropriate quiz type and date)
+Quiz $\#12$ \hspace{1.9in} {Name:} {\underline {\hspace{2.5in}}}
+\vspace{2pc}
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Show all work clearly and in order. Please box your answers.  10 minutes. }}}
+\end{center}
+%%%(modify rules, time, points as appropriate)
+
+\vspace{2pc}
+
+
+
+%\question
+%Indicate the median and the mean on the following graph, using $\tilde{x}$ and $\bar{x}$ respectively.
+
+%figure START---------------------------------------------------------------------------
+%\begin{figure}[h]
+%\centering
+%\includegraphics[scale=0.5]{}
+%\end{figure}
+
+%figure END-----------------------------------------------------------------------------
+
+\begin{questions}
+(PRACTICE PROBLEM)
+Find the most general antiderivative of the function $f(\theta)=5 + \frac{1}{\theta^2} $.
+\vfill
+
+\question[3]
+Write $\displaystyle \int_{0}^{3} \sin(\sqrt{x}) dx$ as a limit of Riemann sums taking the sample points to be the right endpoints on the subintervals. \underline{\bf DO NOT EVALUATE THE LIMIT}
+\vfill
+
+\question[4]
+Evaluate $\displaystyle  \int_0^2 3x dx$ as a limit of Riemann sums taking the sample points to be the right endpoints on the subintervals.
+\vfill
+
+\end{questions}
+
+\end{document}

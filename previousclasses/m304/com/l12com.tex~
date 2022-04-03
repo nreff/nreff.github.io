@@ -1,0 +1,118 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 12}\\
+\bf{2.12.2010}
+\end{center}
+
+
+\noindent {\bf Definition:}  A {\it linear transformation} $T$ from $\mathbb{R}^n$ to $\mathbb{R}^m$ is a function from $\mathbb{R}^n$ to $\mathbb{R}^m$ that must satisfy the following two axioms:
+
+\begin{enumerate}
+\item $T({\bf x}+{\bf y})=T({\bf x})+T({\bf y})$ for all ${\bf x}$ and ${\bf y}$ in $\mathbb{R}^n$
+\item $T(k{\bf x})=kT({\bf x})$ for all ${\bf x}$ in $\mathbb{R}^n$ and $k$ in $\mathbb{R}$
+\end{enumerate}
+
+\noindent {\bf Example 1}:  Let ${\bf x}=\left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right]$ be in $\mathbb{R}^2$ and let $T{:}\mathbb{R}^2 \rightarrow \mathbb{R}$ (remember that $\mathbb{R}$=$\mathbb{R}^1$) be defined as:
+
+\begin{center}
+$T({\bf x})=T\left(  \left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right] \right)=x_1+x_2$
+\end{center}
+
+To see that $T$ is a linear transformation let's check properties 1. and 2. above:
+
+Let ${\bf x}=\left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right]$ and ${\bf y}=\left[ \begin{array}{c} y_1 \\ y_2  \end{array} \right]$ both be in $\mathbb{R}^2$, and let $k$ be in $\mathbb{R}$.
+
+\begin{enumerate}
+\item $T({\bf x}+{\bf y})=T\left(  \left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right]+\left[ \begin{array}{c} y_1 \\ y_2  \end{array} \right] \right)=T\left( \left[ \begin{array}{c} x_1+y_1 \\ x_2+y_2  \end{array} \right]\right)=(x_1+y_1)+(x_2+y_2)=x_1+y_1+x_2+y_2=x_1+x_2+y_1+y_2=(x_1+x_2)+(y_1+y_2)=T\left(  \left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right]\right)+T\left(\left[ \begin{array}{c} y_1 \\ y_2  \end{array} \right] \right)=T({\bf x})+T({\bf y})$
+\item $T(k{\bf x})=T\left(k\left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right]\right)=T\left(\left[ \begin{array}{c} kx_1 \\ kx_2  \end{array} \right]\right)=kx_1+kx_2=k(x_1+x_2)=k T\left(  \left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right]\right)=kT({\bf x})$
+\end{enumerate}
+
+\noindent So indeed $T$ is a linear transformation from $\mathbb{R}^3$ to $\mathbb{R}$
+
+\noindent {\bf Problem 1}: Let ${\bf x}=\left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right]$ be in $\mathbb{R}^2$ and let $T{:}\mathbb{R}^2 \rightarrow \mathbb{R}^2$ be defined as:
+
+\begin{center}
+$T({\bf x})=T\left(  \left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right] \right)=\left[ \begin{array}{c} x_2 \\ x_1  \end{array} \right]$
+\end{center}
+
+\noindent Show that $T$ is a linear transformation from $\mathbb{R}^2$ to $\mathbb{R}^2$.
+
+\newpage
+\begin{center}
+{\Large \bf What in the world did we do today?}
+\end{center}
+\noindent We actually showed an amazing fact: {\bf Theorem 2.6.1}
+\begin{center}
+{\Large \bf Say again?}
+\end{center}
+
+\noindent So I can give you ANY linear transformation $T$ from $\mathbb{R}^n$ to $\mathbb{R}^m$ and there is a unique $m\times n$ matrix $A$ so that $T({\bf x})=A{\bf x}$ for every ${\bf x}$ in $\mathbb{R}^n$. In fact we know exactly what this matrix is. Column by column we determine the matrix A as:
+
+\[ A = \left[ \begin{array}{cccc} T({\bf e}_1) & T({\bf e}_2) & \ldots & T({\bf e}_n)  \end{array} \right] \]
+
+\noindent (Remember the vectors ${\bf e}_i$ for $1\leq i \leq n$ are the {\it standard basis vectors} see p64)
+
+\begin{center}
+{\Large \bf Example!}
+\end{center}
+
+\noindent {\bf Example 2}: Consider the linear transformation we have in {\bf problem 1} above.
+
+Let's find this matrix $A$:
+
+Well what will the dimensions of $A$ be?  The domain of our linear transformation $T$ is $\mathbb{R}^2$ and there are two standard basis vectors in $\mathbb{R}^2$:
+
+\[ {\bf e}_1 = \left[ \begin{array}{c} 1 \\ 0  \end{array} \right] ,\text{ and } {\bf e}_2 = \left[ \begin{array}{c} 0 \\ 1  \end{array} \right]\]
+
+So from what we have said above we will have:
+
+\[ A = \left[ \begin{array}{cc} T({\bf e}_1) & T({\bf e}_2) \end{array} \right]  \]
+
+So we actually only need to do two calculations, we need to find both $T({\bf e}_1)$ and $T({\bf e}_2)$.  Well let's do it:
+
+$T({\bf e}_1) = T\left(  \left[ \begin{array}{c} 1 \\ 0  \end{array} \right]\right) = \left[ \begin{array}{c} 0 \\ 1  \end{array} \right]$
+
+and
+
+$T({\bf e}_2) = T\left(  \left[ \begin{array}{c} 0 \\ 1  \end{array} \right]\right) = \left[ \begin{array}{c} 1 \\ 0  \end{array} \right]$
+
+So these are the two columns of $A$ and hence 
+
+\[ A = \left[ \begin{array}{cc} T({\bf e}_1) & T({\bf e}_2) \end{array} \right] =\left[ \begin{array}{cc} 0 &1\\1&0  \end{array} \right]  \]
+
+Well this is interesting.  Remember we are claiming that $T({\bf x})=A{\bf x}$ for every ${\bf x}$ in $\mathbb{R}^n$.  So let's try an example:
+
+Pick your favorite vector in $\mathbb{R}^2$ (the domain).  Since you are not here I will assume it is ${\bf x} = \left[ \begin{array}{c} 3 \\ -4  \end{array} \right]$.  Let's see what happens when $T$ maps this vector to the codomain $\mathbb{R}^2$:
+
+\[ T({\bf x}) =T\left(  \left[ \begin{array}{c} 3 \\ -4  \end{array} \right] \right) = \left[ \begin{array}{c} 4 \\ -3  \end{array} \right]\]
+
+And now let's see what happens when we find the product $A {\bf x}$:
+
+\[ A{\bf x} = \left[ \begin{array}{cc} 0 &1\\1&0  \end{array} \right] \left[ \begin{array}{c} 3 \\ -4  \end{array} \right] = \left[ \begin{array}{c} -4 \\ 3  \end{array} \right] \] 
+
+Well that is pretty cool.  And of course this will work for any ${\bf x}$ is $\mathbb{R}^2$, why?  Well we proved that this $A$ is the correct matrix in class!
+
+%=======================================================
+
+\end{document}

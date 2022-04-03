@@ -1,0 +1,165 @@
+\documentclass[10pt]{exam}
+
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{fullpage}
+
+\usepackage{graphicx}
+
+%\oddsidemargin=0in
+%\evensidemargin=0in
+%\textwidth=6.3in
+%\topmargin=0.5in
+%\textheight=9in
+
+%\parindent=0in
+\pagestyle{empty}
+
+\pointsinmargin
+\boxedpoints
+ 
+
+\begin{document}
+
+% ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+%                             COVER
+% ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo 
+
+\centerline{\huge \bf EXAM 2}        
+\vspace{2pc} 
+Math 314 - Discrete Mathematics                               %%%(class number and section) 
+
+6/15/2011 \hfill                             %%%(date of test)
+{\bf Name: } $\underline{\hbox{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\\
+
+\begin{center}{\bf When you are finished please sign the following:}\end{center}
+\begin{center}
+    \begin{tabular}{ | c |}
+    \hline
+\\
+\\
+    {\bf Signature: } $\underbrace{\underline{\hbox{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}}_{\mbox{\tiny By signing my name I pledge that I have not broken the Student Academic Honesty Code at any point during this examination.}}$ \\
+\\  
+  \hline
+    \end{tabular}
+\end{center}
+
+{\bf Read all of the following information before starting the exam:}
+\vspace{1pc}
+
+\begin{itemize}                        %%%(change info. as desired)
+	\item You have 60 minutes to complete the exam.
+	\item  Show all work, clearly and in order, if you want to get full
+	credit.  Please make sure you read the directions for each problem.  I reserve the right to take off points if I cannot see how you 
+	arrived at your answer (even if your final answer is correct).
+	
+	\item  Please box/circle or otherwise indicate your final answers.
+
+	\item  Please keep your written answers brief; be clear and to the point.
+	I will take points off for rambling and for incorrect or irrelevant 
+	statements.
+		
+	\item  This test has 11 problems  %%%(number of problems)
+	and is worth 100 points.  There is 1 bonus problem.  It is your responsibility to 
+	make sure that you have all of the pages!
+	
+	\item  Good luck!
+\end{itemize}
+
+%\begin{center}
+%\begin{figure}[h]
+%\includegraphics[scale=0.8]{candh2.jpg}
+%\end{figure}
+%\end{center}
+
+
+\clearpage
+
+
+% ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+%                           PAGE ONE
+% ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+\begin{questions}
+
+\question 
+\begin{parts}
+\part Show: There is a set $A$ such that $\{-1,4,2 \}\backslash A=\{2\}$.
+\vspace{7pc}
+\part Show: There exist sets $A$ and $B$ such that $A\backslash B = B\backslash A$.
+\vspace{7pc}
+\part Show: $\exists n\in \mathbb{Z}$ such that $n^2-4=0$.
+\vspace{7pc}
+\end{parts}
+ 
+\question Show: $\forall x\in \mathbb{R}$, if $x\in (-1,4]$, then $3x-1\in (-4,11]$.
+\vspace{10pc}
+\question Let $A$, $B$ and $C$ be abritrary sets in some universe $\mathcal{U}$.  \\
+
+Show: If $A\subseteq B$ and $A\subseteq C$, then $A \subseteq B\cap C$.
+\vspace{10pc}
+
+\newpage
+\question This problem has been started for you.  Fill in the missing pieces of the proof.\\
+
+Let $A$ and $B$ be arbitrary sets in some universe $\mathcal{U}$.\\
+Show: $\mathcal{P}(A\cap B)=\mathcal{P}(A)\cap\mathcal{P}(B)$.
+\begin{proof} \smallskip
+$(\subseteq)$ Let $C\in \mathcal{P}(A\cap B)$
+
+\vspace{10pc}
+
+$(\supseteq)$ Let $C\in \mathcal{P}(A)\cap\mathcal{P}(B)$
+
+\vspace{10pc}
+
+\end{proof}
+
+
+\question Let $A$, $B$ and $C$ be arbitrary sets in some universe $\mathcal{U}$. 
+
+Show: If $A\subseteq B \subseteq C$, then $A\times A \subseteq C\times C$.
+\vspace{10pc}
+
+\newpage
+
+\question Let $A$, and $B$ be arbitrary sets in some universe $\mathcal{U}$.
+\begin{parts}
+\part Show: $A\backslash B \subseteq A$.
+\vspace{7pc}
+\part Show: $B\backslash A \subseteq B$.
+\vspace{7pc}
+\part Show: $A\Delta B \subseteq A \cup B$ (Hint: use parts (a) and (b) at some point).
+\vspace{15pc}
+
+\end{parts}
+
+\question Show: $\forall x\in \mathbb{R}^{+}$, $x^4=x$ if and only if $x=1$.
+
+\newpage
+\question Show: The interval $(0,1]$ has no smallest element.
+\vspace{11pc}
+
+
+\question Let $n\in \mathbb{Z}$. Show: If $n^2$ is odd, then $n$ is odd. (Hint: Contrapositive)
+\vspace{11pc}
+
+
+\question Show: $\forall a,b\in \mathbb{Z}$, if $a\mid b$, then $a^2\mid b^2$.
+\vspace{11pc}
+
+\question Prove that for all integers $n$, $n^2-n+3$ is odd.
+\vspace{11pc}
+
+\newpage
+\question 
+\begin{parts} 
+\part $\spadesuit$ Let $n\in \mathbb{Z}$. Show: If $n^2$ is divisible by 3, then $n$ is divisible by 3.
+\part $\spadesuit \spadesuit$ Prove that $\sqrt{3}$ is irrational.
+\end{parts}
+\newpage
+
+
+\end{questions}
+
+\end{document}

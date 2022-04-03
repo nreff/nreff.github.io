@@ -1,0 +1,57 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts,empheq}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+
+\definecolor{myblue}{rgb}{.6, .93, .6}
+\newcommand*\mybluebox[1]{%
+\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}}
+
+\newtheorem*{thm}{Theorem}
+
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 35}\\
+\bf{3.18.2010}
+\end{center}
+
+\begin{center}{\LARGE \bf $\mathbb{R}^n$ vs. $P_n$}.\end{center}
+
+
+\begin{tabular}{r|c|c|}
+\multicolumn{1}{r}{}
+ &  \multicolumn{1}{c}{$\mathbb{R}^n$}
+ & \multicolumn{1}{c}{$P_n$} \\
+\cline{2-3}
+Example of a vector: & $\left[ \begin{array}{c} a_1  \\ a_2 \\ \vdots \\ a_n  \end{array} \right]$ & $b_0 + b_1 x + b_2 x^2 + \cdots + b_n x^n$ \\
+\cline{2-3}
+Example of a basis: & $\{ {\bf e}_1 , {\bf e}_2 , \ldots , {\bf e}_n \}$ & $\{ 1 , x , x^2 ,  \ldots , x^n \}$ \\
+\cline{2-3}
+Dimension: & $n$ & $n+1$ \\
+\cline{2-3}
+\end{tabular}
+
+
+
+
+
+%=======================================================
+
+
+\end{document}

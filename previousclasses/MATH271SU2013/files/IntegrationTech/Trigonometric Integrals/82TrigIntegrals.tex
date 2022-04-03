@@ -1,0 +1,220 @@
+\documentclass[reqno]{amsart}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{eucal}
+\usepackage{graphicx,psfrag}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{verbatim} 
+\usepackage{empheq}
+\usepackage{color}
+\usepackage{cancel}
+
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{cor}[lem]{Corollary}
+\newtheorem{prop}[lem]{Proposition}
+\newtheorem{thm}[lem]{Theorem}
+\newtheorem{eg}[lem]{Example}
+
+\definecolor{myblue}{rgb}{.8, .8, 1}
+\newcommand*\mybluebox[1]{\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}}
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
+
+\numberwithin{equation}{section}
+
+\newcommand\tr{\mathrm{tr}}
+\newcommand\bip{\mathrm{bip}}
+\newcommand\rank{\operatorname{rank}}
+\begin{document}
+
+\title{Trigonometric Integrals}
+
+ 
+\author{Nathan Reff}
+\address{Department of Mathematics\\Alfred University\\ Alfred, NY 14802, U.S.A.}
+\email{reff@alfred.edu}
+
+%\date{\today}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Trigonometric Integrals}
+
+
+\begin{eg}  \[ \int \cos^5(x) dx\]
+
+\begin{align*}
+\int \cos^5(x) dx &= \int \cos(x)\cos^2(x)\cos^2(x) dx \\
+&= \int \cos(x)(1-\sin^2(x))(1-\sin^2(x))dx \\
+&= \int \cos(x)(1-\sin^2(x))^2 dx.\\
+\end{align*}
+
+let $u=\sin(x) \implies \dfrac{du}{dx}=\cos(x) \implies dx = \dfrac{du}{\cos(x)}$.
+
+Therefore, 
+\begin{align*}
+\int \cos(x)(1-\sin^2(x))^2 dx &= \int \cancel{\cos(x)} (1-u^2)^2 \frac{du}{\cancel{\cos(x)}} \\
+&= \int (1-u^2)^2 du \\
+&= \int (1-2u^2+u^4)du \\
+&= u-\frac{2u^3}{3}+\frac{u^5}{5}+C \\
+&= \sin(x)-\frac{2\sin^3(x)}{3}+\frac{\sin^5(x)}{5}+C.
+\end{align*}
+ 
+\end{eg} 
+
+\hrule
+
+\begin{eg} \[ \int \sin^3(x)\cos^2(x) dx\]
+
+\begin{align*}
+\int \sin^3(x)\cos^2(x) dx &= \int \sin(x)\sin^2(x)\cos^2(x) dx \\
+&= \int \sin(x)(1-\cos(x)^2)\cos^2(x) dx
+\end{align*}
+
+let $u=\cos(x) \implies \dfrac{du}{dx}=-\sin(x) \implies dx = \dfrac{du}{-\sin(x)}$.
+
+\begin{align*}
+\int \sin(x)(1-\cos(x)^2)\cos^2(x) dx &= \int \cancel{\sin(x)}(1-u^2)u^2 \dfrac{du}{-\cancel{\sin(x)}} \\
+&= \int -(1-u^2)u^2 du \\
+&= -\int (u^2-u^4) du \\
+&= -\frac{u^3}{3} + \frac{u^5}{5} +C\\
+&= -\frac{\cos^3(x)}{3} + \frac{\cos^5(x)}{5} +C.
+ \end{align*}
+\end{eg}
+
+\hrule
+\vspace{3pc}
+
+\[ \int \sin^2(x) dx \text{ and } \int \cos^2(x) dx \]
+
+are \underline{very} common integrals that show in physics and engineering.  To solve these we use the {\bf half angle identities}:
+
+\begin{empheq}[box=\widefbox]{align}
+ \sin^2(x) = \frac{1}{2}(1-\cos(2x)) = \frac{1}{2} - \frac{1}{2}\cos(2x).
+\end{empheq}
+
+\begin{empheq}[box=\widefbox]{align}
+ \cos^2(x) = \frac{1}{2}(1+\cos(2x)) = \frac{1}{2} + \frac{1}{2}\cos(2x).
+\end{empheq}
+
+Alternatively, you could also derive them from the identities:
+
+\begin{empheq}[box=\widefbox]{align}
+\sin(\alpha\pm \beta)=\sin(\alpha)\cos(\beta)\pm \cos(\alpha)\sin(\beta)\\
+\cos(\alpha\pm \beta)=\cos(\alpha)\cos(\beta)\mp \sin(\alpha)\sin(\beta)
+\end{empheq}
+
+\begin{eg}
+\[ \int_0^{\pi/4} \cos^2(x) dx \]
+\begin{align*}
+\int_0^{\pi/4} \cos^2(x) dx &= \int_0^{\pi/4} \frac{1}{2}(1+\cos(2x)) dx \\
+&= \frac{1}{2}\left[ x + \frac{1}{2}\sin(2x) \right]_0^{\pi/4} \\
+&= \frac{1}{2}\left[\left(\frac{\pi}{4}+\frac{1}{2}\cdot 1\right) - (0+0)\right]\\
+&= \frac{\pi+2}{8}. 
+\end{align*}
+\end{eg}
+
+\hrule
+\vspace{3pc}
+
+\pagebreak
+\begin{center}
+{\bf STRATEGY for evaluating} $ \int \sin^m(x) \cos^n(x) dx$.
+\begin{enumerate}
+\item  If the power of COSINE is ODD (n=2k+1), save one cosine factor and use $\cos^2(x)=1-\sin^2(x)$:
+\begin{align*}
+\int \sin^m(x) \cos^{2k+1}(x) dx &= \int \sin^m(x) (\cos^{2}(x))^k \cos(x) dx \\
+&= \int \sin^m(x) (1-\sin^{2}(x))^k  \cos(x) dx 
+\end{align*}
+Then substitute $u=\sin(x)$.
+\item If the power of SINE is ODD (m=2k+1), save one sine factor and use $\sin^2(x)=1-\cos^2(x)$:
+\begin{align*}
+\int \sin^{2k+1}(x) \cos^n(x) dx &= \int (\sin^{2}(x))^k\sin(x)\cos^n(x) dx \\
+&=  \int (1-\cos^{2}(x))^k\sin(x)\cos^n(x) dx 
+\end{align*}
+Then substitute $u=\cos(x)$. [NOTE: if the pwers of both sine and coside are odd, either (1) or (2) can be used.]
+\item If the powers of BOTH SINE AND COSINE are EVEN, use the half angle formulas.
+\end{enumerate}
+\end{center}
+
+\hrule
+\vspace{3pc}
+
+\begin{center}
+{\bf STRATEGY for evaluating} $ \int \tan^m(x) \sec^n(x) dx$.
+\begin{enumerate}
+\item  If the power of SECANT is EVEN, save a factor of $\sec^2(x)$ and use $\sec^2(x)=1+\tan^2(x)$.
+\item If the power of TAN is ODD, save a factor of $\sec(x)\tan(x)$ and use $\tan^2(x)=\sec^2(x)-1$.
+\end{enumerate}
+\end{center}
+
+\hrule 
+
+\begin{eg} \[ \int \sec^4(\theta)\tan^5(\theta)d\theta \]
+\underline{{\bf SOLUTION 1:}}
+\begin{align*}
+\int \sec^4(\theta)\tan^5(\theta)d\theta &= \int \sec^2(\theta)\sec^2(\theta)\tan^5(\theta)d\theta \\
+&= \int \sec^2(\theta)(1+\tan^2(\theta))\tan^5(\theta)d\theta \\
+\end{align*}
+let $u=\tan(\theta) \implies \dfrac{du}{d\theta}=\sec^2(\theta) \implies d\theta = \dfrac{du}{\sec^2(\theta)}$.
+
+\begin{align*}
+\int \sec^2(\theta)(1+\tan^2(\theta))\tan^5(\theta)d\theta &= \int \cancel{\sec^2(\theta)}(1+u^2)u^5 d\dfrac{du}{\cancel{\sec^2(\theta)}}\\
+&= \int (u^5+u^7) du\\
+&= \frac{u^6}{6}+\frac{u^8}{8}+C\\
+&= \frac{\tan^6(\theta)}{6}+\frac{\tan^8(\theta)}{8}+C
+\end{align*}
+
+\underline{{\bf SOLUTION 2:}}
+\begin{align*}
+\int \sec^4(\theta)\tan^5(\theta)d\theta &= \int \sec^3(\theta)\sec(\theta)\tan(\theta)\tan^4(\theta)d\theta \\
+&= \int \sec^3(\theta)\sec(\theta)\tan(\theta)(\sec^2(\theta)-1)^2d\theta \\
+\end{align*}
+let $u=\sec(\theta) \implies \dfrac{du}{d\theta}=\sec(\theta)\tan(\theta) \implies d\theta = \dfrac{du}{\sec(\theta)\tan(\theta)}$.
+
+\begin{align*}
+\int \sec^3(\theta)\sec(\theta)\tan(\theta)(\sec^2(\theta)-1)^2d\theta  &= \int u^3\cancel{\sec(\theta)\tan(\theta)}(u^2-1)^2 \dfrac{du}{\cancel{\sec(\theta)\tan(\theta)}} \\
+&= \int (u^3(1-2u^2+u^4)) du\\
+&= \int (u^3-2u^5+u^7) du\\
+&= \frac{u^4}{4}-2\frac{u^6}{6}+\frac{u^8}{8}+C\\
+&= \frac{\sec^4(\theta)}{4}-\frac{\sec^6(\theta)}{3}+\frac{\sec^8(\theta)}{8}+C
+\end{align*}
+(Subtitute $\tan^2(x)=\sec^2(x)-1$ into solution 1 to see that it matches solution 2.)
+\end{eg}
+
+\hrule
+\vspace{1pc}
+
+For other cases we do not always have such a clear guideline. Sometimes you will need to use integration by parts, identities, or something else altogether.
+
+Recall,
+\begin{empheq}[box=\widefbox]{align}
+\int \tan(x) dx = \ln |\sec(x)|+C.
+\end{empheq}
+
+We will also need
+\begin{empheq}[box=\widefbox]{align}
+\int \sec(x) dx = \ln |\sec(x)+\tan(x)|+C.
+\end{empheq}
+
+\hrule
+\vspace{1pc}
+
+To evaluate the integrals
+\begin{center}
+\begin{enumerate}
+\item $\int \sin(mx) \cos(nx) dx$.
+\item $\int \sin(mx) \sin(nx) dx$.
+\item $\int \cos(mx) \cos(nx) dx$.
+\end{enumerate}
+\end{center}
+
+Use the corresponding identities:
+\begin{center}
+\begin{enumerate}
+\item $\sin(A)\cos(B)=\frac{1}{2}[\sin(A-B)+\sin(A+B)]$.
+\item $\sin(A)\sin(B)=\frac{1}{2}[\cos(A-B)-\cos(A+B)]$.
+\item $\cos(A)\cos(B)=\frac{1}{2}[\cos(A-B)+\cos(A+B)]$.
+\end{enumerate}
+\end{center}
+
+\end{document}

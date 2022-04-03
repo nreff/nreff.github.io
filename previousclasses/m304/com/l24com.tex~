@@ -1,0 +1,163 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts,empheq}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+
+\definecolor{myblue}{rgb}{.6, .93, .6}
+\newcommand*\mybluebox[1]{%
+\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}}
+
+\newtheorem*{thm}{Theorem}
+
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 24}\\
+\bf{3.12.2010}
+\end{center}
+
+
+\begin{center}{\LARGE \bf Examples!}.\end{center}
+
+
+{\bf Example 1:}  Consider the (ordered) set 
+
+\[X = \left( \left[ \begin{array}{r} 1 \\ 1  \\ 0  \end{array} \right], \left[ \begin{array}{r} -1 \\  1 \\ 1  \end{array} \right], \left[ \begin{array}{r}-3 \\ 5  \\ 4  \end{array} \right] \right) \]
+
+\begin{enumerate}
+\item Is $X$ linearly indepdent?  If not find a depdence relation on $X$.
+\item Does $X$ span $\mathbb{R}^3$ (i.e., is Span($X$)=$\mathbb{R}^3$)?
+\item Is $X$ a (ordered) basis of $\mathbb{R}^3$?
+\end{enumerate}
+
+{\bf Solution:}
+
+\begin{enumerate}
+\item Using the ``test for linear independece" (p129):
+
+Let $A=\left[ \begin{array}{rrr} 1 & -1 & -3  \\ 1 & 1 & 5 \\ 0&1&4  \end{array} \right] $
+
+Putting $A$ into reduced row echelon form we obtain:
+
+\[ A=\left[ \begin{array}{rrr} 1 & -1 & -3  \\ 1 & 1 & 5 \\ 0&1&4  \end{array} \right] \xrightarrow[]{\text{putting } A \text{ in RREF}}  \left[ \begin{array}{rrr} 1 & 0 & 1  \\ 0 & 1 & 4 \\ 0&0&0  \end{array} \right]
+\]
+
+So the rank($A$)=2 (number of pivot columns).  So rank($A$)=2$\neq$3 (the number of columns). Hence the answer is \colorbox{myblue}{no}, and $X$ must be linearly depdendent.\\
+
+To find a depdence relation on $X$ we need to find a nontrivial solution to the homogeneous system $A{\bf x} ={\bf 0}$. Well we did all of the work actually, but if you did this from scratch you would set up an augmented matrix for the system and reduce:
+
+\[ \left[ \begin{array}{rrr| r} 1 & -1 & -3 & 0 \\ 1 & 1 & 5 & 0 \\ 0&1&4 &0 \end{array} \right] \xrightarrow[]{\text{putting into RREF}}  \left[ \begin{array}{rrr| r} 1 & 0 & 1 &0 \\ 0 & 1 & 4& 0 \\ 0&0&0& 0  \end{array} \right]
+\]
+
+This has a parametric solution of the form:
+
+\begin{align*}
+x_1 &= -t\\
+x_2 &= -4t\\
+x_3 &= t 
+\end{align*}
+
+So to get an example of a nontrival solution to the homogenous system  $A{\bf x} ={\bf 0}$ would could set $t=1$ and so $x=\left[ \begin{array}{r} -1 \\ -4  \\ 1  \end{array} \right] $ is a solution.  So we have a depdence relation on $X$:
+
+\begin{empheq}[box=\mybluebox]{align*}
+(-1)\left[ \begin{array}{r} 1 \\ 1  \\ 0  \end{array} \right] + (-4)\left[ \begin{array}{r} -1 \\  1 \\ 1  \end{array} \right] + (1)\left[ \begin{array}{r}-3 \\ 5  \\ 4  \end{array} \right] = \left[ \begin{array}{r}0 \\ 0  \\ 0  \end{array} \right] = {\bf 0}
+\end{empheq}
+
+\item Using 1. We have rank($A$)$=2\neq3=$ (the number of rows).  Hence the answer is \colorbox{myblue}{no}, and $X$ does not span all of $\mathbb{R}^3$.
+
+\item Using 1. or 2. the answer is \colorbox{myblue}{no}.  Don't forget the definition of a basis! 
+\end{enumerate}
+
+
+{\bf Example 2:}  Let $A=\left[ \begin{array}{rrr} 1 & -1 & -3  \\ 1 & 1 & 5 \\ 0&1&4  \end{array} \right] $
+
+\begin{enumerate}
+\item Find a basis $X$ for the column space of $A$.
+\item What is the dimension of the column space of $A$?
+\item Find a basis $Y$ for the null space of $A$.
+\item What is the dimension of the null space of $A$?
+\item Find a basis $Z$ for the row space of $A$.
+\item What is the dimension of the row space of $A$?
+\end{enumerate}
+
+{\bf Solution:} 
+
+\begin{enumerate}
+\item We put $A$ into reduced row ecehelon form (RREF):
+
+\[ A=\left[ \begin{array}{rrr} 1 & -1 & -3  \\ 1 & 1 & 5 \\ 0&1&4  \end{array} \right] \xrightarrow[]{\text{putting } A \text{ in RREF}}  \left[ \begin{array}{rrr} 1 & 0 & 1  \\ 0 & 1 & 4 \\ 0&0&0  \end{array} \right]=A'
+\]
+
+So this means that columns 1 and 2 are the pivot columns.  The set of pivot columns of $A$ form a basis of the column space of $A$.  Hence,
+
+\begin{empheq}[box=\mybluebox]{align*}
+X =  \left( \left[ \begin{array}{r} 1 \\ 1  \\ 0  \end{array} \right], \left[ \begin{array}{r} -1 \\  1 \\ 1  \end{array} \right] \right)
+\end{empheq}
+
+\item The dimension of the column space is the number of elements in $X$ hence \colorbox{myblue}{2}.  (Remember we also have that the dimension of the column space = rank($A$) = 2  )
+ 
+\item We find the vector parametric form of the solution set to the homogenous system $A{\bf x}={\bf 0}$:
+
+\[ \left[ \begin{array}{rrr| r} 1 & -1 & -3 & 0 \\ 1 & 1 & 5 & 0 \\ 0&1&4 &0 \end{array} \right] \xrightarrow[]{\text{putting into RREF}}  \left[ \begin{array}{rrr| r} 1 & 0 & 1 &0 \\ 0 & 1 & 4& 0 \\ 0&0&0& 0  \end{array} \right]
+\]
+
+This has a parametric solution of the form:
+
+\begin{align*}
+x_1 &= -t\\
+x_2 &= -4t\\
+x_3 &= t 
+\end{align*}
+
+or we could write:
+
+\begin{align*}
+x_1 &= -x_3\\
+x_2 &= -4x_3\\
+x_3 &= x_3 
+\end{align*}
+
+So the vector parametric form would be:
+
+\[ {\bf x} =  \left[ \begin{array}{r} -x_3 \\ -4x_3  \\ x_3  \end{array} \right] = x_3 \left[ \begin{array}{r} -1 \\ -4  \\ 1  \end{array} \right] \]
+
+The set of vectors in the vector parametric form of the solution set of $A{\bf x}={\bf 0}$ form a basis for the null space of $A$.  Hence,
+
+\begin{empheq}[box=\mybluebox]{align*}
+Y =  \left( \left[ \begin{array}{r} -1 \\ -4  \\ 1  \end{array} \right] \right)
+\end{empheq}
+
+\item The dimension of the null space is the number of elements in $Y$ hence \colorbox{myblue}{1}.  (remember we also have that the dimension of the null space = number of non pivot columns = 3 - rank($A$) = 3 - 2 = 1)
+
+\item Using the work from 1. we have that a basis for the row space can be made from the nonzero rows of $A'$ (the reduced row echelon form of $A$).  Hence,
+
+\begin{empheq}[box=\mybluebox]{align*}
+Z =  \left( \left[ \begin{array}{rrr} 1&0&1  \end{array} \right] ,  \left[ \begin{array}{rrr} 0&1&4  \end{array} \right]  \right)
+\end{empheq}
+
+\item The dimension of the row space is the number of elements in $Z$ hence \colorbox{myblue}{2}.  (Remember we also have that the dimension of the row space = rank($A$) = 2  )
+ 
+
+\end{enumerate}
+
+
+
+
+%=======================================================
+
+
+\end{document}

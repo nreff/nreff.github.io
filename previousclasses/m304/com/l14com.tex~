@@ -1,0 +1,150 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 16}\\
+\bf{2.22.2010}
+\end{center}
+
+\begin{center}
+Using {\bf Theorem 1.6.2}.
+\end{center}
+
+\noindent Suppose that $C$ is an $m\times n$ matrix regarded as a function from $\mathbb{R}^n$ to $\mathbb{R}^m$.  We can use {\bf Theorem 1.6.2} on page 33 to determine when $C$ is {\it onto}, {\it one-to-one} or even when it is a {\it one-to-one correspondence} using {\bf Corollary 1.6.3} simply by computing the rank.\\
+
+\noindent You could also be asked the more challenging problems:\\
+
+\noindent {\bf Problem 1}.  Suppose that $C$ is not onto.  Then find a ${\bf b}$ in $\mathbb{R}^m$ such that there is no ${\bf x}$ in $\mathbb{R}^n$ such that $C{\bf x} = {\bf b}$.  \\
+
+\noindent {\bf Problem 2}.  Suppose that $C$ is not one-to-one.  Then find two different vectors ${\bf x}$ and ${\bf y}$ in $\mathbb{R}^n$ such that $C{\bf x}=C{\bf y}$ (note that $C{\bf x}$ and $C{\bf y}$ are in $\mathbb{R}^m$). \\
+
+\noindent There are a few ways that you can solve these problems and I will show you a method that will work in general.\\
+
+\noindent To solve {\bf problem 1} keep in mind the idea of {\it onto} reminding you of ``existence of solutions".  In other words to solve problem 1 we are trying to find a vector ${\bf b}$ such that the system:
+
+\[C{\bf x} = {\bf b}  \]
+
+\noindent is inconsistent.  In other words you cannot find an ${\bf x}$ in $\mathbb{R}^n$ to solve it.  We use the following procedure to solve this problem:
+
+\begin{enumerate}
+\item Create the augmented matrix $A = \left[ \begin {array}{c|c} C & {\bf b}\\\end {array} \right]$ where ${\bf b}=\left[ \begin{array}{c} b_1 \\ b_2 \\ \vdots \\ b_m  \end{array} \right]$.  Here we keep $b_1, b_2,\ldots , b_m$ as unknown variables.   (remember we don't know what {\bf b} is yet!)
+\item Put $A$ into row echelon form (you could of course put $A$ into reduced row echelon form but row echelon form should be enough) to obtain the matrix $A' = \left[ \begin {array}{c|c} C' & {\bf b'}\\\end {array} \right]$.  In other words:
+
+\[ A = \left[ \begin {array}{c|c} C & {\bf b}\\\end {array} \right] \xrightarrow[]{\text{Putting }C \text{ into REF}} A' = \left[ \begin {array}{c|c} C' & {\bf b}'\\\end {array} \right] \]
+
+\item Notice you must have at least one row of $C'$ be a row of all zeros.  Why?  Well otherwise the rank of $C$ would be equal to the number of rows which means that $C$ would be onto by {\bf Theorem 1.6.2} (which cannot happen since we are starting with a matrix $C$ which is not onto).  So let's look at the very last row of $A'$ which we agreed must look like the following:
+
+\[ \left[ \begin {array}{cccc|c} 0 & 0 & \ldots & 0 & b_m^{'}\\\end {array} \right] \]
+
+Where $b_m^{'}$ will be a linear combination of the $b_i$'s (since $b_m^{'}$ is obtained by elementary row operations of $A$ with the rightmost column only involving the $b_i$'s).
+
+In other words $b_{m}^{'}=t_1 b_1 + t_2 b_2 + \ldots + t_m b_m$ where each of the $t_i$'s are real numbers for $1\leq i \leq m$.  So how do we make our original system:
+
+\[C{\bf x} = {\bf b}  \]
+
+An inconsistent system?  Just make $b_m^{'} \neq 0$.  So you just start to pick some values of $b_1 , b_2 , \ldots b_m$ which makes $b_m^{'} \neq 0$ and you have such a vector ${\bf b}$ that we were looking for.
+
+\item Phew!
+\end{enumerate}
+
+\noindent  Let's try to use this method.\\
+\noindent  {\bf Example 1:} \\
+
+\noindent (a) Show that the matrix $C=\left[ \begin{array}{cc} 1 &1  \\ 2 & 2  \end{array} \right]$ does not represent an onto function. \\
+
+\noindent (b) Find a vector ${\bf b}$ in $\mathbb{R}^2$ that is not in the image of the function (in other words find a ${\bf b}$ in $\mathbb{R}^2$ such that the equation $C{\bf x}={\bf b}$ has no solution).  (in other other words find a vector ${\bf b}$ in $\mathbb{R}^2$ so there is no ${\bf x}$ in $\mathbb{R}^2$ such that $C{\bf x} = {\bf b}$). \\
+
+
+\noindent {\it Solution to (a)}:  
+
+\[ \left[ \begin{array}{cc} 1 &1  \\ 2 & 2  \end{array} \right] 
+\xrightarrow[]{R2\rightarrow R2-2R1}  
+\left[  \begin{array}{cc} 1 &1  \\ 0 & 0  \end{array} \right] \]
+
+\noindent The rank of the matrix $C$ is 1 which is not equal to the number of rows which is 2.  Therefore by Theorem 1.6.2 $C$ cannot represent an onto function.
+
+\noindent {\it Solution to (b)}:  
+
+\noindent Using the method described above to solve Problem 1 we have:
+
+\[ \left[ 
+\begin{array}{cc|c} 1 &1 & b_1 \\ 2 & 2 & b_2 \end{array} \right] 
+\xrightarrow[]{R2\rightarrow R2-2R1} 
+\left[  \begin{array}{cc|c} 1 &1 & b_1 \\ 0 & 0 & b_2-2b_1 \end{array} \right] \]
+
+\noindent So in order to make our system inconsistent we just need $b_2-2b_1 \neq 0$.  So think of anything that makes this true.  Well for example $b_2=5$ and $b_1=0$ works right? So we can say for sure that the vector ${\bf b}=\left[ \begin{array}{c} 0 \\ 5 \end{array} \right]$ is not in the image of the function described by $C$.  In other words the system $C {\bf x} =  \left[ \begin{array}{c} 0 \\ 5 \end{array} \right]$ has no solutions for the above $C$.
+
+
+
+
+\noindent To solve {\bf problem 2} keep in mind the idea of {\it one-to-one} reminding you of ``uniqueness of solutions".  In other words we are trying to find two different vectors ${\bf x}$ and ${\bf y}$ in $\mathbb{R}^n$ such that $C{\bf x} = C{\bf y}$.  We use the following procedure to solve this problem:
+
+\begin{enumerate}
+\item Find something in the image of the function described by $C$.  For example consider where the zero vector ${\bf x}={\bf 0}$ in $\mathbb{R}^n$.  Where does this go?  Well $C{\bf 0} = {\bf 0}$.
+
+\item Solve the system $C{\bf y} = {\bf 0}$ and pick any solution ${\bf y}\neq {\bf 0}$.  Then you have two different vectors ${\bf x}={\bf 0}$ and ${\bf y}$ such that $C{\bf x} =C{\bf y}$.
+\end{enumerate}
+
+\noindent {\it Question}:  Will this method always work if we pick ${\bf x}={\bf 0}$ initially (for some $m\times n$ matrix $C$ which is not one-to-one)?  The answer is actually yes and we will see why later in the course.\\
+
+\noindent Let's try to use this method.\\
+{\bf Example 2:} \\
+
+\noindent (a) Show that the matrix $C=\left[ \begin{array}{cc} 1 &1  \\ 2 & 2  \end{array} \right]$ does not represent a one-to-one function. \\
+
+\noindent (b) Find two different vectors ${\bf x}$ and ${\bf y}$ in $\mathbb{R}^n$ such that $C{\bf x} = C{\bf y}$.  \\
+
+\noindent {\it Solution to (a)}:  
+
+\noindent The rank of the matrix $C$ is 1 (shown above) which is not equal to the number of columns which is 2.  Therefore by Theorem 1.6.2 $C$ cannot represent a one-to-one function.
+
+\noindent {\it Solution to (b)}:  
+
+\noindent Using the method described above to solve Problem 2 we have:
+
+\noindent Let ${\bf x} = {\bf 0}$ and notice $C{\bf x} = {\bf 0}$.\\
+
+\noindent Now let's solve the system $C{\bf y} = {\bf 0}$.  Well using our normal method of creating an augmented matrix and row reducing we have:
+
+\[ \left[ 
+\begin{array}{cc|c} 1 &1 & 0 \\ 2 & 2 & 0 \end{array} \right] 
+\xrightarrow[]{R2\rightarrow R2-2R1} 
+\left[  \begin{array}{cc|c} 1 &1 & 0 \\ 0 & 0 & 0 \end{array} \right] \]
+
+S\noindent o the solution in parametric form would be:
+
+\noindent $y_1 = -s$ and $y_2 = s$.  Therefore let's pick a vector ${\bf y}\neq {\bf 0}$ such that $y_1 = -s$ and $y_2 = s$.  For example let $s=1$ and we have $y=\left[ \begin{array}{c} -1  \\ 1 \end{array} \right]$.\\
+
+\noindent Indeed we have ${\bf y}\neq {\bf x} = {\bf 0}$ and $C {\bf x} = C{\bf y} = {\bf 0}$.
+
+
+
+
+
+
+
+
+
+%=======================================================
+
+
+\end{document}

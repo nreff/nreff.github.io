@@ -1,0 +1,89 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts,empheq}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+
+\definecolor{myblue}{rgb}{.6, .93, .6}
+\newcommand*\mybluebox[1]{%
+\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}}
+
+\newtheorem*{thm}{Theorem}
+
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 29}\\
+\bf{3.18.2010}
+\end{center}
+
+\begin{center}{\LARGE \bf A Zoo of Vector Spaces}.\end{center}
+
+NOTE:  In the following examples I do not verify all 10 axioms of a vector space are satisfied.  This is left to the motivated reader.\\
+
+{\bf Example 0:} The most trivial vector space is the {\it zero vector space} \colorbox{myblue}{$\{ {\bf 0} \}$}.  This is a vector space over $\mathbb{R}$ (but actually over any field).
+
+{\bf Example 1:} Our old friend {\it Euclidean space} (or {\it real coordinate space}) \colorbox{myblue}{$\mathbb{R}^n$} is a vector space over $\mathbb{R}$ with vector addition and scalar multiplication as defined on p38.
+
+{\bf Example 2:} The set of all polynomials with coefficients in $\mathbb{R}$ of degree less than or equal to $n$ (where $n$ is a nonnegative number) is a vector space over $\mathbb{R}$ with vector addition defined as addition of polynomials and scalar multiplication defined as scalar multiplication of polynomials.  In the book this set is denoted $P_n$.\\
+
+\noindent {\underline{Formally}}:  The set 
+
+\begin{empheq}[box=\mybluebox]{align*}
+P_n = \{ a_0 + a_1 x +a_2 x^2 + \cdots + a_n x^n \mid a_0,a_1,a_2,\ldots,a_n \in \mathbb{R}  \}
+\end{empheq}
+
+is a vector space over $\mathbb{R}$ with vector addition and scalar multiplication defined as follows\\
+
+\underline{Vector addition}: let $p(x),q(x)\in P_n$.  So we can write: $p(x)=a_0 + a_1 x +a_2 x^2 + \cdots + a_n x^n$ and $q(x)=b_0 + b_1 x +b_2 x^2 + \cdots + b_n x^n$ where each $a_j\in \mathbb{R}$ and each $b_k\in \mathbb{R}$ for $j,k=0,1,2,\ldots,n$. Then
+
+\begin{align*}
+p(x)+q(x) &= (a_0 + a_1 x +a_2 x^2 + \cdots + a_n x^n)+(b_0 + b_1 x +b_2 x^2 + \cdots + b_n x^n)\\ 
+ &= (a_0+b_0) + (a_1+b_1) x +(a_2+b_2) x^2 + \cdots + (a_n+b_n) x^n
+\end{align*}
+
+\underline{Scalar multiplication}: let $p(x)\in P_n$ and let $\alpha \in \mathbb{R}$.  So we can write: $p(x)=a_0 + a_1 x +a_2 x^2 + \cdots + a_n x^n$ where each $a_j\in \mathbb{R}$ for $j=0,1,2,\ldots,n$.  Then
+
+\begin{align*}
+\alpha p(x) &= \alpha(a_0 + a_1 x +a_2 x^2 + \cdots + a_n x^n)\\ 
+ &= \alpha a_0 + \alpha a_1 x +\alpha a_2 x^2 + \cdots +\alpha a_n x^n
+\end{align*}
+
+{\bf Example 3:} The set of polynomials with coefficients in $\mathbb{R}$ is a vector space over $\mathbb{R}$ with vector addition defined as addition of polynomials and scalar multiplication defined as scalar multiplication of polynomials.  This vector space is often denoted $\mathbb{R}[x]$.
+
+{\bf Example 4:} The set of all $m\times n$ matrices with entries in $\mathbb{R}$ is a vector space over $\mathbb{R}$ with vector addition defined as matrix addition and scalar multiplication defined as scalar multiplication of matrices.  This vector space is sometimes denoted $M(m, n)$ or $M_{n,m}(\mathbb{R})$ or $\mathbb{R}^{m\times n}$.
+
+{\bf Example 5:} The set of all functions from $\mathbb{R}$ to $\mathbb{R}$ is a vector space over $\mathbb{R}$ with vector addition defined as function addition and scalar multiplication defined as scalar multiplication of functions.\\
+
+\noindent {\underline{Formally}}:  The set $F= \{ f{:}\mathbb{R}\rightarrow\mathbb{R} \}$ is a vector space over $\mathbb{R}$ with vector addition and scalar multiplication defined as follows\\
+
+\underline{Vector addition}: let $f,g\in F$.  Then
+
+\[ (f+g)(x)=f(x)+g(x) \text{ for all } x\in \mathbb{R} \]
+
+
+\underline{Scalar multiplication}: let $f\in F$ and let $\alpha \in \mathbb{R}$.  Then
+
+\[ (\alpha f)(x)=\alpha f(x)\text{ for all } x\in \mathbb{R} \]
+
+{\bf Example 6:} The set of all continuous functions from $[0,1]$ to $\mathbb{R}$ is a vector space over $\mathbb{R}$ with vector addition defined as function addition and scalar multiplication defined as scalar multiplication of functions.\\
+
+\noindent {\underline{Formally}}:  The set $C[0,1]= \{ f{:}[0,1]\rightarrow\mathbb{R} \mid f \text{ is continuous} \}$ is a vector space over $\mathbb{R}$ with vector addition and scalar multiplication defined as in example 5.
+%=======================================================
+
+
+\end{document}

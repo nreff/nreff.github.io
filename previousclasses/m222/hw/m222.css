@@ -1,0 +1,44 @@
+
+
+h1.mhead  {
+	font-variant: small-caps;
+	font-style: normal;
+	font-weight:300;
+	background-color:#6699cc;
+ 
+	border: 1px solid #000000;
+	margin: 0px;
+	padding: 0 0 0 1em;
+	
+	}
+
+.info  {
+   margin-left: 0px;
+	font-size: 110%;
+  	background-color: #e2e0d4;
+	border: 1px solid #000000;
+	padding: 0 0 0 1em;
+       }
+
+.info b {
+        font-variant: small-caps;
+	font-weight: 300;
+        }
+
+.info a {
+        text-decoration: none;
+        }
+
+.info th {
+        font-variant: small-caps;
+	font-weight: 300;
+	text-align: left;
+        }
+
+
+#container {
+       margin-left:0px;
+       margin-right:0px;
+       padding-left:0em;
+       }
+

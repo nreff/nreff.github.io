@@ -1,0 +1,79 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 13}\\
+\bf{2.17.2010}
+\end{center}
+
+\noindent Here is another example problem using methods from section 2.6.\\
+\noindent {\bf Example:}  Consider the linear transformation $T{:}\mathbb{R}^2 \to \mathbb{R}^2$ defined as:
+
+\begin{center}
+$T({\bf x})=T\left(  \left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right] \right)=\left[ \begin{array}{c} x_2 \\ x_1  \end{array} \right]$
+\end{center}
+
+where ${\bf x}=\left[ \begin{array}{c} x_1 \\ x_2  \end{array} \right]$ is in $\mathbb{R}^2$.
+
+Consider also the linear transformation $S{:}\mathbb{R}^2 \to \mathbb{R}$ defined as:
+
+\begin{center}
+$S({\bf y})=S\left(  \left[ \begin{array}{c} y_1 \\ y_2  \end{array} \right] \right)=y_2$
+\end{center}
+
+where ${\bf y}=\left[ \begin{array}{c} y_1 \\ y_2  \end{array} \right]$ is in $\mathbb{R}^2$.
+
+{\it Questions:}\\
+\noindent(1) Find the associated matrix $A$ such that $T{\bf x} = A{\bf x}$ for any ${\bf x}$ in $\mathbb{R}^2$.\\
+\noindent(2) Find the associated matrix $B$ such that $S{\bf y} = B{\bf y}$ for any ${\bf y}$ in $\mathbb{R}^2$.\\
+\noindent(3) Does the composition $S(T({\bf x}))$ exist?  If so find the associated matrix $C$ such that $S(T({\bf x})) = C{\bf x}$ for any ${\bf x}$ in $\mathbb{R}^2$.\\
+\noindent(4) Does the composition $T(S({\bf y}))$ exist?  If so find the associated matrix $D$ such that $T(S({\bf y})) = D{\bf y}$ for any ${\bf y}$ in $\mathbb{R}^2$.\\
+
+
+\noindent{\bf Solutions:}\\
+\noindent(1) We did this in the comments from lecture 12.
+
+\[ A =\left[ \begin{array}{cc} 0 &1\\1&0  \end{array} \right]  \]
+
+
+\noindent(2) We did this in the comments from lecture 12.
+
+\[ B =\left[ \begin{array}{cc} 0 &1  \end{array} \right]  \]
+
+\noindent(3) Using {\bf Theorem 2.6.2} the composition $S(T({\bf x}))$ exists and we have $C=BA$.
+
+\[ C=BA = \left[ \begin{array}{cc} 0 &1  \end{array} \right] \left[ \begin{array}{cc} 0 &1\\1&0  \end{array} \right] =  \left[ \begin{array}{cc} 1 &0  \end{array} \right]\] 
+
+(Notice that you could also find this by the method used to solve (1) and (2) but I wanted you to see how we can use theorem 2.6.2 to solve this problem.)\\
+
+\noindent(4) This composition does not exist.  The domain of $T$ is $\mathbb{R}^2$ and the codomain of $S$ is $\mathbb{R}$ (so anything in the image of $S$ will be in $\mathbb{R}$ and cannot be an ``input" for $T$).  To convince even more look at what would happen:
+
+\[ T(S({\bf y})) = T\left(S\left(  \left[ \begin{array}{c} y_1 \\ y_2  \end{array} \right] \right)\right) = T(\text{ }\underbrace{y_2}_{\text{in }\mathbb{R}}\text{ }) = \text{Does not exist}\]
+
+The domain of $T$ is $\mathbb{R}^2$ and $y_2$ is just a real number and not a vector in $\mathbb{R}^2$ so we cannot make sense of $T(y_2)$.
+
+
+
+%=======================================================
+
+
+\end{document}

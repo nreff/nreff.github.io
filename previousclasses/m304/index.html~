@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Math 304</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+@import "m304.css";
+/*]]>*/
+</style>
+
+<style type="text/css">
+/*<![CDATA[*/
+ body {
+  background-color: #FFFFFF;
+ }
+ span.c1 {font-size: 80%}
+/*]]>*/
+</style>
+</head>
+<body>
+<h1 class="mhead">Math 304-2 - Linear Algebra - Spring 2010</h1>
+<div id="container"><br />
+<div class="info">
+<table>
+<tbody>
+<tr>
+<td><b>Instructor:</b> Nate Reff</td>
+</tr>
+<tr>
+<td><b>Office:</b> LN 2243</td>
+</tr>
+<tr>
+<td><b>Email:</b> reff at math dot binghamton dot edu</td>
+</tr>
+<tr>
+<td colspan="2"><b>Course Meetings:</b> MWF 8:30-9:30 in SW 327, R 8:30-9:55 in FA 209</td>
+</tr>
+<tr>
+<td><b>Office Hours:</b> M 9:40-10:40, W 3:30-5:30, F 9:40-10:40 in LN 2243</td>
+</tr>
+<tr>
+<td><b>Textbook:</b> <em>Math 304 (Spring 2010), 11th Ed.</em>, by M. Brin and G. Marchesi</td>
+</tr>
+<tr>
+<td><b>Syllabus:</b> <a href="m304.pdf">pdf</a></td>
+</tr>
+<tr>
+<td><b>Department Linear Algebra Website:</b> <a href="http://www.math.binghamton.edu/dennis/304.s10/allindex.html">http://www.math.binghamton.edu/dennis/304.s10/allindex.html</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+<div class="info">
+<b>Class Material</b>
+<table width="70%">
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td>
+<li><a href="com/">Lecture Comments / Handouts / Examples</a>
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="hw/">Homework</a>
+</li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="http://www.math.binghamton.edu/dennis/304.s10/tests.html
+">Exam Solutions</a>
+</li>
+</td>
+</tr>
+</table>
+</div>
+<br />
+
+<div class="info">
+<b>Additional Resources</b>
+<table width="70%">
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td> <li><a href="http://ocw.mit.edu/OcwWeb/Mathematics/18-06Spring-2005/CourseHome/index.htm">Linear Algebra (Spring 2005) @ MIT</a> Taught by Gilbert Strang! (Has video lectures)</li></td>
+</tr>
+<tr>
+<td> <li><a href="http://ocw.mit.edu/OcwWeb/Mathematics/18-700Fall-2005/CourseHome/index.htm">Linear Algebra (Fall 2005) @ MIT</a></li> </td>
+</tr>
+<tr>
+<td> <li><a href="http://www.math.odu.edu/~bogacki/cgi-bin/lat.cgi">Linear Algebra Toolkit </a></li> </td>
+</tr>
+<tr>
+<td> <li><a href="http://wims.unice.fr/wims/en_tool~linear~matrix.html">Matrix calculator </a></li> </td>
+</tr>
+<tr>
+<td> <li>Kurt Bryan , Tanya Leise, <a href="http://www.rose-hulman.edu/~bryan/googleFinalVersionFixed.pdf">The $25,000,000,000 Eigenvector: The Linear Algebra behind Google</a>, SIAM Rev. 48 (2006), no.3, pp.569-581.</li> </td>
+</tr>
+<tr>
+<td> <li>Sheldon Axler, <a href="http://www.axler.net/DwD.pdf">Down with Determinants!</a>, American Mathematical Monthly 102 (1995), 139-154.</li> </td>
+</tr>
+<tr>
+<td> <li><a href="http://prairiehome.publicradio.org/programs/20031129/scripts/guy_noir.shtml">Guy Noir and some Linear Algebra</a> (Humor)</li> </td>
+</tr>
+<tr>
+<td> <li><a href="http://www-math.bgsu.edu/~grabine/linear.html">Declaration of Linear Independence</a> (Humor)</li> </td>
+</tr>
+</table>
+</div>
+
+<br />
+
+<div class="info">
+<b>Other Educational Resources</b>
+<table width="70%">
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+
+<tr>
+<td> <li>In 2002 MIT launched the OpenCourseWare (OCW) website: <a href="http://ocw.mit.edu/">ocw.mit.edu</a>.  The basic concept was to make educational material freely available to the public.  Since its inception many (over 200 or so) other universities have adopted the principles and created there own OCW projects.  See the <a href="http://www.ocwconsortium.org/">OpenCourseWare Consortium</a> website.  Here are a few of the many OCW sites: </li></td>
+</tr>
+
+<tr>
+<td>
+<a href="http://www.maths.ox.ac.uk/opencourseware/">Oxford University Mathematics OpenCouseWare</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://webcast.berkeley.edu/">Berkeley Webcast</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://ocw.uci.edu/">UC Irvine OpenCourseWare</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://ocw.nd.edu/">Notre Dame OpenCourseWare</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://oyc.yale.edu/">Open Yale courses</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://ocw.umb.edu/">UMass Boston OpenCourseWare</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://open.umich.edu/education//">Open.Michigan</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://ocw.tufts.edu/">Tufts OpenCourseWare</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="http://ocw.usu.edu/">Utah State OpenCourseWare</a>
+</td>
+</tr>
+
+
+<tr>
+<td><li> Another website which offers free online video lectures is <a href="http://academicearth.org/">Academic Earth</a>.  This site has just recently been launched (March 2009) and many of these lectures come from the OCW websites available. </li></td>
+</tr>
+<tr>
+<td><li> iTunes U, which is part of the iTunes Store is also another large collection of free educational media.</li></td>
+</tr>
+</table>
+</div>
+<br />
+
+
+</body>
+</html>
+

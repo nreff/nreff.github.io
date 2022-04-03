@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\newtheorem{theorem}{Theorem}
+
+\title{MTH 629}
+\author{Nate Reff }
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Here we explore some \LaTeX examples.
+\end{abstract}
+
+\section*{Introduction}
+
+$1-x^2$
+
+\[1-x^2\]
+
+% this is a comment!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\[(1-x)^3 = (1-x)(1-2x+x^2)\]
+---------
+\begin{align}
+(1-x)^3 = (1-x)(1-2x+x^2) \label{text}
+\end{align}
+%
+blah blah blah \\
+By Equation (\ref{text})
+blah blah blah blah blah blah
+
+
+\begin{itemize} \setlength\itemsep{0em}
+    \item Property 1.
+    \[ \alpha^2 = \sum_{i=1}^{\infty} a_i \]
+    \item Propert 2.
+    \item Final thing.
+\end{itemize}
+
+\vspace{20pt}
+\vfill
+TEST \hspace{30pt} SPACING\\
+TEST \hfill SPACING
+
+
+\begin{itemize}
+    \item[(I)] Property 1.
+    \item[(II)] Propert 2.
+    \item[(III)] Final thing.
+\end{itemize}
+
+\newpage
+
+\begin{enumerate}
+    \item Property 1.
+    \item Propert 2.
+    \item Final thing.
+\end{enumerate}
+
+
+% This is how to create a comment in LaTeX
+% The $ here puts us into "math mode" and LaTeX will convert this properly.
+$\alpha$
+
+
+a=b=c
+
+\begin{itemize} \setlength\itemsep{0em}
+    \item size test
+    \item {\tiny size test}
+    \item {\large size test}
+    \item {\Large size test}
+     \item {\LARGE size test}
+     \item {\huge size test}
+     \item {\bf size test}
+     \item {\it size test}
+     \item \underline{testing still}
+     \item $\mathbf{x}$
+\end{itemize}
+
+
+
+% Here \[ will also put is into "display style math mode" where the math is centered and more pronounced.
+\[ a=b=c=\sum_{i=1}^n \alpha_i \beta^i \]
+
+$\displaystyle a=b=c=\sum_{i=1}^n \alpha_i \beta^i $\\
+
+$\emptyset$\\
+$\epsilon$
+
+$ a=b=c=\sum_{i=1}^n \alpha_i \beta^i $
+
+% Matrix with square brackets
+\[
+A = \begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix} \in \mathbb{R}^{2\times 2} 
+\]
+
+
+
+
+%Display math mode equation
+\[ 
+(1-x)^3 = (1-x)(1-2x+x^2) = 1-2x+x^2 -x +2x^2 -x^3
+\]
+
+
+%desplay math mode align.  In the align environment the & symbols will line up, so here the = all line up.  The \\ is a line break.  The * here is just to remove any number labels to the equations.
+\begin{align*}
+(1-x)^3 &= (1-x)(1-2x+x^2)\\
+        &= 1-2x+x^2 -x +2x^2 -x^3    
+\end{align*}
+
+$a=b and b=c$ \\
+
+$a=b\text{ and }b=c$\\
+
+
+$a=b$ and $b=c$
+
+
+%here is the theorem environment
+\begin{theorem}
+Everything above QED is true
+\end{theorem}
+%here is the proof environment
+\begin{proof}
+QED
+\end{proof}
+
+
+\[ |z-a_{ii}| \leq  \sum_{i} a_i\] 
+
+%sections and subsections can be created like this.  The * here will remove a number associated to the section.
+\section*{Background}
+\subsection*{Graphs}
+\subsection*{Matrix Analysis}
+
+\section*{Adjacency Matrices}
+
+
+\end{document}

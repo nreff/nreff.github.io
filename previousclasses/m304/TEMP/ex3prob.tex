@@ -1,0 +1,66 @@
+
+\documentclass[10pt]{exam}
+
+\usepackage{amsmath,amssymb,amsfonts}
+
+
+\oddsidemargin=0in
+\evensidemargin=0in
+\textwidth=6.3in
+\topmargin=-0.5in
+\textheight=9in
+
+\parindent=0in
+\pagestyle{empty}
+\pointsinmargin
+\boxedpoints
+\begin{document}
+
+\begin{questions}
+\question
+\begin{choices}
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} If $A$ is a $5\times 5$ matrix and the rank of $A$ is 4 then $\det(A)=0$.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} There exists an isomorphism from $P_{17}$ to $\mathbb{R}^{17}$.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular}  $\mathbb{R}^4$ has a basis $X$ such that each vector in  $\mathbb{R}^4$ can be written in more than one way as a linear combination of the elements of $X$.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} $P_4$ has a basis $X$ such that each polynomial (vector) in $P_4$ can be written in more than one way as a linear combination of the elements of $X$.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} The set of functions $\{c_2 x^2 + c_3 x^3 + c_4 x^4 \mid c_2,c_3,c_4 \in \mathbb{R} \}$ is a subspace of $P_4$.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} If $X$ is a collection of vectors in a vector space $W$, then Span($X$) is a subspace of $W$.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} Span$\left(\left \{ \left[ \begin{array}{r} 4 \\ 8 \\ -2\\ \end{array}\right] \right \} \right)$ is a subspace of $\mathbb{R}^3$.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} Span($\{1,1-x^2\}$) is a subspace of $P_2$.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} If the set $S$ is linearly independent in $P_4$ then $S \cup \{1+x\}$ is always linearly independent.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} If $S$ is a spanning set of $P_4$ then $S$ always contains the vector (polynomial) $x^3$.  
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} If $S$ is a spanning set of $P_4$ then Span($S$) always contains the vector (polynomial) $x^3$.
+\choice \begin{tabular}{|c|c|}\hline True & False \\ \hline \end{tabular} The linear transformation $T{:}\mathbb{R}^2 \rightarrow \mathbb{R}^2$ with associated matrix $\left[\begin{array}{rr} 1 & -1 \\ 2 & -2 \end{array} \right]$ is an isomorphism. 
+\end{choices}
+
+\question
+Suppose $A$ and $B$ are both $5\times 5$ matrices where $\det(A)=5$ and $\det(B)=3$. Evaluate $\det(B^{-1}AB^{\text{T}}AB^2)$.
+
+\question
+\begin{parts}
+\part 
+Show that the set $B=(1+2x^2,1+x,1+x+x^2)$ is a basis of $P_2$.
+\part
+There is a polynomial $p(x)$ in $P_2$ which has the coordinate vector $K_{B}(p(x))=\left[ \begin{array}{r} -1 \\ 1 \\ 5 \end{array} \right]$ with repect to the basis $B$ from part (a).  Find $p(x)$.
+\part
+Find $K_{B}(7+3x-x^2)$ where $B$ is the basis from part (a).
+\end{parts}
+
+\question
+Show the set $Y = \{ a_0+a_1 x+a_2 x^2 \in P_2 \mid a_0+a_1+a_2=0 \}$ is a subspace of $P_2$.
+
+\question
+Let $S=\left( \left[\begin{array}{r} 1 \\ 0 \end{array}\right], \left[\begin{array}{r} 0 \\ 1 \end{array}\right] \right)$ be the standard basis of $\mathbb{R}^2$.  Let $X=\left( \left[\begin{array}{r} -1 \\ 0 \end{array}\right], \left[\begin{array}{r} 1 \\ -1 \end{array}\right] \right)$ be a basis of $\mathbb{R}^2$ (you do not need to show this).  Let $T{:}\mathbb{R}^2\rightarrow \mathbb{R}^2$ be a linear transformation given by the matrix (with respect to the basis $S$)
+\[ {}_S T_S =\left[ \begin{array}{rr} 1 & 4 \\ -2 & 3 \end{array}\right]\]
+
+\begin{parts}
+\part Find ${}_S I_X$.
+\part Find ${}_X I_S$.
+\part Using parts (a) and (b) find ${}_X T_X$.
+\part Show that $T$ is an isomorphism.
+\end{parts}
+
+
+\end{questions}
+\end{document}
+

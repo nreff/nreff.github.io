@@ -1,0 +1,115 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx}
+
+\begin{document} 
+
+{\bf Simpler Example:}\\
+
+Find the solution set to the following system of linear equations:
+
+
+
+$
+\left[ \begin {array}{ccc|c} 1&-1&1&2\\ -1&2&-1&1
+\\ 2&1&3&0\end {array} \right] 
+\xrightarrow[]{R2\rightarrow R2+R1}
+\left[ 
+\begin {array}{ccc|c} 1&-1&1&2\\ 0&1&0&3
+\\ 2&1&3&0\end {array} \right] 
+\xrightarrow[]{R3\rightarrow R3-2R1} 
+
+
+\left[ \begin {array}{ccc|c} 1&-1&1&2\\ 0&1&0&3
+\\ 0&3&1&-4\end {array} \right] 
+\xrightarrow[]{R3\rightarrow R3-3R2}
+ \left[ 
+\begin {array}{ccc|c} 1&-1&1&2\\ 0&1&0&3
+\\ 0&0&1&-13\end {array} \right] 
+\xrightarrow[]{R1\rightarrow R1+R2}
+ \left[ \begin {array}{ccc|c} 1&0&1&5\\ 0&1&0&3
+\\ 0&0&1&-13\end {array} \right] 
+
+\xrightarrow[]{R1\rightarrow R1-R3}
+ \left[ 
+\begin {array}{ccc|c} 1&0&0&18\\ 0&1&0&3
+\\ 0&0&1&-13\end {array} \right] 
+$
+
+So we have exactly one solution to the system: $x_1 = 18$, $x_2 = 3$ and $x_3=13$.  Now just to make sure that we did not make a mistake we should check our answer...\\
+
+
+
+
+
+{\bf Good Practice with fractions:}\\
+
+
+Add -2/3 times row 1 to row 2\\
+Add 2/3 times row 1 to row 3\\
+ Add -8 times row 2 to row 3\\
+
+Multiply row 1 by 1/3\\
+Multiply row 2 by 3\\
+Add -1/3 times row 2 to row 1\\
+Multiply row 3 by -1/19\\
+Add 3 times row 3 to row 1\\
+Add -8 times row 3 to row 2\\
+
+$
+ \left[ \begin {array}{cccc} 3&1&-1&10\\ \noalign{\medskip}2&1&2&5
+\\ \noalign{\medskip}-2&2&3&1\end {array} \right]
+\xrightarrow[]{R2\rightarrow R2-\frac{2}{3}R1}
+\left[ 
+\begin {array}{cccc} 3&1&-1&10\\ \noalign{\medskip}0&1/3&8/3&-5/3
+\\ \noalign{\medskip}-2&2&3&1\end {array} \right] 
+\xrightarrow[]{R3\rightarrow R3+\frac{2}{3}R1}$
+
+$
+ \left[ \begin {array}{cccc} 3&1&-1&10\\ \noalign{\medskip}0&1/3&8/3&-
+5/3\\ \noalign{\medskip}0&8/3&7/3&{\frac {23}{3}}\end {array} \right] 
+\xrightarrow[]{R3\rightarrow R3-8R2}
+\left[ \begin {array}{cccc} 3&1&-1&10\\ \noalign{\medskip}0&1/3&8/3&
+-5/3\\ \noalign{\medskip}0&0&-19&21\end {array} \right] 
+\xrightarrow[]{R1\rightarrow \frac{1}{3}R1}$
+
+$
+\left[ \begin {array}{cccc} 1&1/3&-1/3&10/3\\ \noalign{\medskip}0&1/3
+&8/3&-5/3\\ \noalign{\medskip}0&0&-19&21\end {array} \right] 
+\xrightarrow[]{R2\rightarrow 3R2}
+\left[ 
+\begin {array}{cccc} 1&1/3&-1/3&10/3\\ \noalign{\medskip}0&1&8&-5
+\\ \noalign{\medskip}0&0&-19&21\end {array} \right] 
+\xrightarrow[]{R1\rightarrow R1-\frac{1}{3}R2}
+
+ \left[ \begin {array}{cccc} 1&0&-3&5\\ \noalign{\medskip}0&1&8&-5
+\\ \noalign{\medskip}0&0&-19&21\end {array} \right] 
+\xrightarrow[]{R3\rightarrow \frac{-1}{19}R3}
+$
+$
+ \left[ 
+\begin {array}{cccc} 1&0&-3&5\\ \noalign{\medskip}0&1&8&-5
+\\ \noalign{\medskip}0&0&1&-{\frac {21}{19}}\end {array} \right] 
+\xrightarrow[]{R1\rightarrow R1+3R3} 
+
+\left[ \begin {array}{cccc} 1&0&0&{\frac {32}{19}}
+\\ \noalign{\medskip}0&1&8&-5\\ \noalign{\medskip}0&0&1&-{\frac {21}{
+19}}\end {array} \right] 
+\xrightarrow[]{R2\rightarrow R2-8R3}
+$
+$
+ \left[ \begin {array}{cccc} 1&0&0&{\frac {
+32}{19}}\\ \noalign{\medskip}0&1&0&{\frac {73}{19}}
+\\ \noalign{\medskip}0&0&1&-{\frac {21}{19}}\end {array} \right] 
+$
+
+
+\end{document}

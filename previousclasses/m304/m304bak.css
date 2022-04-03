@@ -1,0 +1,56 @@
+
+
+h1.mhead  {
+	font-variant: small-caps;
+	font-style:normal;
+	font-weight:300;
+	background-color:#c9c5ba; 
+	border: 1px solid #000000;
+	margin: 0px;
+	padding: 0 0 0 1em;
+	
+	}
+
+.footer{
+	clear: both;
+	margin: 0;
+	background-color:#c9c5ba; 
+	border: 1px solid #000000;
+	font-family: Ariel;
+	font-variant: small-caps;
+	font-style:normal;
+	font-weight:100;
+	padding-left:2em;
+	}
+
+.info  {
+   margin-left: 0px;
+   font-family: georgia, verdana, Arial, Helvetica, sans-serif; 
+	font-size: 110%;
+  	background-color: #e2e0d4;
+	border: 1px solid #000000;
+	width: 80%;
+	padding: 0 0 0 1em;
+	border-radius: 20px;
+  	-webkit-border-radius: 20px;
+  	-moz-border-radius: 20px;
+       }
+
+.info b {
+        font-variant: small-caps;
+	font-weight: 300;
+        }
+
+.info th {
+        font-variant: small-caps;
+	font-weight: 300;
+	text-align: left;
+        }
+
+
+#container {
+       margin-left:0px;
+       margin-right:0px;
+       padding-left:0em;
+       }
+

@@ -1,0 +1,251 @@
+\documentclass[reqno]{amsart}
+\usepackage{amsmath,amssymb,amsfonts,polynom}
+\usepackage{eucal}
+\usepackage{graphicx,psfrag}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{verbatim} 
+\usepackage{empheq}
+\usepackage{color}
+\usepackage{cancel}
+\theoremstyle{definition}
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{cor}[lem]{Corollary}
+\newtheorem{prop}[lem]{Proposition}
+\newtheorem{thm}[lem]{Theorem}
+\newtheorem{eg}[lem]{Example}
+
+\definecolor{myblue}{rgb}{.8, .8, 1}
+\newcommand*\mybluebox[1]{\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}}
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
+
+\numberwithin{equation}{section}
+
+\newcommand\tr{\mathrm{tr}}
+\newcommand\bip{\mathrm{bip}}
+\newcommand\rank{\operatorname{rank}}
+\begin{document}
+
+\title{Integration of Rational FUnctions by Partial Fractions}
+ 
+\author{Nathan Reff}
+\address{Department of Mathematics\\Alfred University\\ Alfred, NY 14802, U.S.A.}
+\email{reff@alfred.edu}
+
+%\date{\today}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Partial Fractions}
+
+A {\bf rational function} is a ratio of polynomials.  In other words, a function of the form:
+
+\[ f(x) = \frac{p(x)}{q(x)} = \frac{a_nx^n +a_{n-1}x^{n-1} +\cdots + a_1x +a_0}{b_mx^m +b_{m-1}x^{m-1} +\cdots + b_1x +b_0}, \text{   where } q(x)\neq0.\]
+
+In this section we will show how to integrate any rational function.  This is done by expressing the rational function as a sum of simpler fractions, called {\bf partial fractions}, which are simple to integrate.
+
+To illistate this idea, consider the following:
+
+\[ \frac{1}{x+1} - \frac{3}{x-1} = \frac{1(x-1)-3(x+1)}{(x-1)(x+1)} = \frac{-2x-4}{x^2-1}. \]
+
+Reversing this procedure leads to a nice solution to the integral of the rational function on the right:
+
+\begin{align*}
+\int \frac{-2x-4}{x^2-1} dx &= \int  \left(\frac{1}{x+1} - \frac{3}{x-1}\right) dx \\
+&= \ln|x+1|-3\ln|x-1|+C.
+\end{align*}
+
+So let's begin the journey of integrating an arbitrary rational function.  As you might notice, for a general rational function there are many cases to consider.
+\hrule
+\vspace{1pc}
+
+{\bf Step 1:}  If $\deg(p(x))\geq \deg(q(x))$ we must perform polynomial long division until a remainder $r(x)$ is obtained where $\deg(r(x))<\deg(q(x))$.  We would then have:
+\[ f(x) = \frac{p(x)}{q(x)} = s(x)+\frac{r(x)}{q(x)}. \]
+ 
+Note that both $s(x)$ and $r(x)$ are polynomials.
+
+\begin{eg} Evaluate: 
+\[ \int \frac{x^3-5}{x+1} dx.\]
+
+Notice that the degree of the numerator is 3 and the degree of the denominator is 1 so we must perform the ``preliminary step" described above.
+
+\begin{center}
+\polylongdiv{x^3-5}{x+1}
+\end{center}
+
+Therefore, 
+\begin{align*}
+\int \frac{x^3-5}{x+1} dx &= \int  \left(x^2-x+1 -\frac{6}{x+1}\right) dx \\
+&= \frac{1}{3}x^3-\frac{1}{2}x^2+x-6\ln|x+1|+C.
+\end{align*}
+\end{eg}
+\hrule
+\vspace{1pc}
+
+{\bf Step 2:} Factor $q(x)$ as much as possible.\\
+
+\begin{lem}
+Any polynomial $q(x)$ can be factored as a product of {\bf linear factors} (of the form $ax+b$) and irreducible {\bf quadratic factors} (of the form $ax^2+bx+c$, where $b^2-4ac <0$). 
+\end{lem}
+
+\begin{eg}
+\[ q(x) = x^4 - 81 = (x^2-9)(x^2+9) = (x-3)(x+3)(x^2+9). \]
+\end{eg}
+\hrule
+\vspace{1pc}
+
+{\bf Step 3:} Express the rational function $\frac{r(x)}{q(x)}$ (from Step 1) as a sum of {\bf partial fractions} of the form
+
+\[ \frac{A}{(ax+b)^j} \text{ or } \frac{Ax+B}{(ax^2+bx+c)^k} \]
+
+\hrule
+\vspace{1pc}
+
+Now we describe the several cases that may occur in this process.
+
+
+{\bf CASE 1:} {\it The denominator, $q(x)$, is a product of distinct linear factors} (This is where you are very happy).
+
+So $q(x)$ can be written in the following form:
+\[ q(x) = (a_1x+b_1)(a_2x+b_2)\cdots(a_ix+b_i). \]
+
+Were no factor is repeated (or a constant multiple of another).  In this we know there exists constants $A_1,A_2,\ldots,A_i$ such that
+
+\[ \frac{r(x)}{q(x)} = \frac{A_1}{a_1x+b_1} + \frac{A_2}{a_2x+b_2} + \cdots \frac{A_i}{a_ix+b_i}\]
+
+
+\begin{eg} Evaluate: \[ \int \frac{x-3}{x^2+5x+6} dx.\]
+{\it Solution:}\\
+\noindent{\it Step 1:} Done, degree of numerator is 1, degree of denominator is 2.\\
+\noindent{\it Step 2:} $x^2+5x+6=(x+3)(x+2)$.\\
+\noindent{\it Step 3:} Notice the factors $(x+3)$ are distinct $(x+2)$. Therefore, this is an integral of the type from CASE 1.
+
+We want to write:
+\[  \frac{x-3}{(x+3)(x+2)} = \frac{A}{x+3} + \frac{B}{x+2}.\]
+So we need to find $A$ and $B$.  With some algebra we have:
+\[  \frac{x-3}{(x+3)(x+2)} = \frac{A(x+2)}{(x+3)(x+2)} + \frac{B(x+3)}{(x+3)(x+2)} = \frac{A(x+2)+B(x+3)}{(x+3)(x+2)}.\]
+So we need to solve
+\[ x-3 = A(x+2)+B(x+3). \]
+Expand and compare coefficients:
+\[ x-3 = Ax+2A+Bx+3B=(A+B)x+(2A+3B). \]
+The coefficients must match and therefore:
+\begin{align*}
+A+B &= 1\\
+2A+3B &= -3.
+\end{align*}
+Solving this we can write $A=1-B$.  Substituting into the second equation we have $-3=2(1-B)+3B=2-2B+3B=2+B$.  Hence, $B=-5$.  So, $A=1-(-5)=6$.
+Finally,
+\[ \frac{x-3}{(x+3)(x+2)} = \frac{6}{x+3} + \frac{-5}{x+2} \]
+So we can now write:
+\begin{align*}
+\int \frac{x-3}{x^2+5x+6} dx &= \int \left( \frac{6}{x+3} + \frac{-5}{x+2}\right) dx \\
+&= 6\ln|x+3|-5\ln|x+2| +C.
+\end{align*}
+\end{eg}
+
+\hrule
+\vspace{1pc}
+
+{\bf CASE 2:} {\it $q(x)$ is a product of linear factors, some of which are repeated.}
+
+Suppose that the first linear factor $(a_1 x +b_1)$ is repeated say $j$ times.  That is, $(a_1x+b_1)^j$ occurs in the factorization of $q(x)$.\\
+
+If this happens, instead of the single term $\frac{A_1}{a_1 x +b_1}$ as in CASE 1 we use:
+
+\[ \frac{A_1}{a_1x+b_1} + \frac{A_2}{(a_1x+b_1)^2} + \cdots + \frac{A_j}{(a_1x+b_1)^j}. \]
+
+For instance, we could write:
+\[ \frac{2x^2+x-2}{x^3(x+1)^2} = \frac{A}{x}+\frac{B}{x^2}+\frac{C}{x^3}+\frac{D}{x+1}+\frac{E}{(x+1)^2}.\]
+
+
+\begin{eg} Evaluate:
+\[ \int \frac{2x^2+x-2}{x^3+x^2} dx.\]
+\noindent{\it Step 1:} Done, degree of numerator is 2, degree of denominator is 3.\\
+\noindent{\it Step 2:} $x^3+x^2=x^2(x+1)$.\\
+\noindent{\it Step 3:} We have a repeated linear factor and a distinct linear factor in the denominator.  This is an example of CASE 2 and CASE 1 combined.
+So we write:
+\[ \frac{2x^2+x-2}{x^2(x+1)} = \frac{A}{x}+\frac{B}{x^2}+\frac{C}{x+1}.\]
+
+Finding a common denominator we have:
+\begin{align*}
+\frac{2x^2+x-2}{x^2(x+1)} &= \frac{Ax(x+1)}{x^2(x+1)}+\frac{B(x+1)}{x^2(x+1)}+\frac{Cx^2}{x^2(x+1)} \\
+&= \frac{Ax(x+1)+B(x+1)+Cx^2}{x^2(x+1)}\\
+&= \frac{Ax^2+Ax+Bx+B+Cx^2}{x^2(x+1)}\\
+&= \frac{(A+C)x^2+(A+B)x+B}{x^2(x+1)}\\
+\end{align*}
+
+So comparing numerators we must have:
+
+\[ 2x^2+x-2 = (A+C)x^2+(A+B)x+B.\]
+
+Therefore,
+
+\begin{align*}
+A+C &= 2\\
+A+B &= 1\\
+B&=-2
+\end{align*} 
+This says $A=1-(-2)=3$ and $C=2-A=2-3=-1$.
+\end{eg}
+Finally,
+
+\begin{align*} 
+\int \frac{2x^2+x-2}{x^3+x^2} dx &= \int \left(\frac{3}{x}-2x^{-2}+\frac{-1}{x+1} \right) dx
+&= 3\ln|x|-2\frac{x^{-1}}{-1}-\ln|x+1|+C\\
+&= 3\ln|x|+\frac{2}{x}-\ln|x+1|+C\\
+\end{align*}
+
+\hrule
+\vspace{1pc}
+
+{\bf CASE 3:} {\it $q(x)$ contains irreducible quadratic factors, none of which is repeated.}
+
+Here we must introduce partial fractions of the form
+\[ \frac{Ax+B}{ax^2+bx+c}.\]
+For instance, we can write
+\[ \frac{x^3-x+1}{(x-2)(x^2+1)} = \frac{A}{(x-2)}+\frac{Bx+C}{x^2+1}.\]
+
+\begin{eg} Evaluate:
+\[ \int \frac{x^3-x+1}{x^3-2x^2+x-2} dx. \]
+\noindent{\it Step 1:} 
+\begin{center}
+\polylongdiv{x^3-x+1}{x^3-2x^2+x-2}
+\end{center}
+So 
+\[ \frac{x^3-x+1}{x^3-2x^2+x-2} = 1 + \frac{2x^2-2x+3}{x^3-2x^2+x-2}.\]
+\noindent{\it Step 2:} $x^3-2x^2+x-2=x^2(x-2)+(x-2)=(x-2)(x^2+1)$.\\
+\noindent{\it Step 3:} 
+\[\frac{2x^2-2x+3}{(x-2)(x^2+1)} = \frac{A}{(x-2)}+\frac{Bx+C}{x^2+1}.\]
+So
+\begin{align*}
+\frac{2x^2-2x+3}{(x-2)(x^2+1)} &= \frac{A(x^2+1)+(Bx+C)(x-2)}{(x-2)(x^2+1)}\\
+&=  \frac{Ax^2+A+Bx^2-2Bx+Cx-2C}{(x-2)(x^2+1)}\\
+&=  \frac{(A+B)x^2+(-2B+C)x-2C+A}{(x-2)(x^2+1)}\\
+\end{align*}
+Therefore,
+\begin{align*}
+A+B&=2\\
+-2B+C&=-2\\
+-2C+A&=3
+\end{align*}
+Solving this we have
+$A=7/5$, $B=3/5$ and $C=-4/5$.
+Finally,
+\begin{align*}
+\int \frac{x^3-x+1}{x^3-2x^2+x-2} dx &= \int \left(1+\frac{\frac{7}{5}}{(x-2)}+\frac{\frac{3}{5}x+\frac{-4}{5}}{x^2+1} \right) dx \\
+&= x+\frac{7}{5}\ln|x-2|+\frac{3}{5}\int \frac{x}{x^2+1} dx -\frac{4}{5}\int \frac{1}{x^2+1} dx\\
+&= x+\frac{7}{5}\ln|x-2|+\frac{3}{5}\frac{\ln|x^2+1|}{2} -\frac{4}{5}\tan^{-1}(x) +C\\
+&= x+\frac{7}{5}\ln|x-2|+\frac{3}{10}\ln(x^2+1) -\frac{4}{5}\tan^{-1}(x) +C
+\end{align*}
+\end{eg}
+
+\hrule
+\vspace{1pc}
+
+{\bf CASE 4:} {\it $q(x)$ contains repeated irreducible quadratic factors.}
+Say $q(x)$ has a factor $ax^2+bx+c)^i$, where $b^2-4ac<0$, then instead of a single partial fraction as in CASE 3, we must have
+
+\[ \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2x+B_2}{(ax^2+bx+c)^2} +\cdots \frac{A_ix+B_i}{(ax^2+bx+c)^i}\]
+
+
+\end{document}

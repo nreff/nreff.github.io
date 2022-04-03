@@ -1,0 +1,56 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 3}\\
+\bf{1.28.2010}
+\end{center}
+
+Start working on the homework ASAP.  To get use to some of the definitions that we used today please try to work on (5)1 on page 18.\\
+
+\noindent{\bf Practice problems:}\\
+Find the row echelon form of the following augmented matrices:
+
+$$
+\left[ \begin {array}{ccc|c} 1&-1&1&2\\ -1&2&-1&1
+\\ 2&1&3&0\end {array} \right] 
+$$
+
+and
+
+$$
+\left[ \begin {array}{ccc|c} 3&1&-1&10\\ 2&1&2&5
+\\ -2&2&3&1\end {array} \right]
+$$
+
+\noindent{\bf Questions to think about after you try (5)1:}\\
+
+\noindent Is a {\it triangular matrix} always in row echelon form (REF)?\\
+
+\noindent Is a {\it diagonal matrix} always in row echelon form (REF)?\\
+
+\noindent Is a {\it diagonal matrix} always in reduced row echelon form (RREF)?\\
+
+\noindent If the answer was NO for any of the above, then how could we change the question(s) so the answer(s) are yes?
+
+\noindent If you are given an arbitrary diagonal matrix, how do you obtain a row equivalent matrix that is in reduced row echelon form (RREF)?\\
+
+
+
+
+
+%=======================================================
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\newtheorem{theorem}{Theorem}
+
+\title{MTH 629}
+\author{nathan.reff }
+\date{March 2018}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Here we explore some \LaTeX examples.
+\end{abstract}
+
+\section*{Introduction}
+
+blah blah blah \\
+blah blah blah blah blah blah
+
+
+% This is how to create a comment in LaTeX
+% The $ here puts us into "math mode" and LaTeX will convert this properly.
+$\alpha$
+
+
+a=b=c
+
+
+% Here \[ will also put is into "display style math mode" where the math is centered and more pronounced.
+\[ a=b=c=\sum_{i=1}^n \alpha_i \beta^i \]
+
+
+% Matrix with square brackets
+\[
+\begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix}
+\]
+
+
+%Display math mode equation
+\[ 
+(1-x)^3 = (1-x)(1-2x+x^2) = 1-2x+x^2 -x +2x^2 -x^3
+\]
+
+
+%desplay math mode align.  In the align environment the & symbols will line up, so here the = all line up.  The \\ is a line break.  The * here is just to remove any number labels to the equations.
+\begin{align*}
+(1-x)^3 &= (1-x)(1-2x+x^2)\\
+        &= 1-2x+x^2 -x +2x^2 -x^3    
+\end{align*}
+
+$a=b and b=c$ \\
+
+$a=b\text{ and }b=c$\\
+
+
+$a=b$ and $b=c$
+
+
+%here is the theorem environment
+\begin{theorem}
+Everything above QED is true
+\end{theorem}
+%here is the proof environment
+\begin{proof}
+QED
+\end{proof}
+
+
+%sections and subsections can be created like this.  The * here will remove a number associated to the section.
+\section*{Background}
+\subsection*{Graphs}
+\subsection*{Matrix Analysis}
+
+\section*{Adjacency Matrices}
+
+
+\end{document}

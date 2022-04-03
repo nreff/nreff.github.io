@@ -1,0 +1,198 @@
+
+
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 4}\\
+\bf{1.29.2010}
+\end{center}
+
+Thank you very much for those who participated today.  Especially some new participants!  You all asked excellent questions that I think will help everyone understand the material better.  
+
+Today we started to discuss 1.3.3 and unfortunately I did not get to tell you the end of the story.  I hope that the following is not too difficult to follow so we can do the homework for Monday.  
+
+
+\begin{center}
+{\bf Writing the solution set to a system of Linear Equations}\\
+
+We start with a system of linear equations $S$ $\longleftrightarrow$ Augmented matrix $A$ $\rightarrow$ Take off the last column of $A$ to get the coefficient matrix $C$
+\end{center}
+
+Let $A'$ be the matrix obtained by reducing $A$ until $C$ is in reduced row echelon form (RREF) and let $C'$ be the matrix obtained by deleting the last column of $A'$
+
+In some sense think of the following picture to help make sense of the notation:
+\[ A = \left[ \begin {array}{c|c} C & b\\\end {array} \right] \xrightarrow[]{\text{Putting }C \text{ into RREF}} A' = \left[ \begin {array}{c|c} C' & b'\\\end {array} \right] \]
+
+Where $b$ is the rightmost column of numbers in $A$ and $b'$ is the rightmost column of numbers in $A'$.\\
+
+{\bf For example}:
+If $A= \left[ \begin {array}{ccc|c} 1&2&0&3\\ -1&-2&1&1
+\\ -1&-2&0&5\end {array} \right]$
+
+Then
+\begin{center}
+$C= \left[ \begin {array}{ccc} 1&2&0\\ -1&-2&1
+\\ -1&-2&0\end {array} \right]$ and $b=\left[ \begin {array}{c} 3\\ 1
+\\ 5\end {array} \right]$
+\end{center}
+
+And after putting $C$ into RREF we get:
+
+\[ A= \left[ \begin {array}{ccc|c} 1&2&0&3\\ -1&-2&1&1
+\\ -1&-2&0&5\end {array} \right]
+\xrightarrow[]{ \text{Putting }C \text{ into RREF} } A' = \left[ \begin {array}{ccc|c} 1&2&0&3\\ 0&0&1&4
+\\ 0&0&0&8\end {array} \right] 
+\]
+
+Then
+\begin{center}
+$C'= \left[ \begin {array}{ccc} 1&2&0\\ 0&0&1
+\\ 0&0&0\end {array} \right]$ and $b=\left[ \begin {array}{c} 3\\ 4
+\\ 8\end {array} \right]$
+\end{center}
+  
+
+{\bf What can we say at this point?}\\
+
+\noindent{\bf 1.}  If the right most column of $A'$ has a pivot position THEN $S$ has no solutions. (The system is {\it inconsistent}).
+
+{\bf For example}: See the above example! 
+
+\noindent{\bf 2.} If the right most column of $A'$ has NO pivot position THEN $S$ will have a solution to the system.  The questions now is how many solutions and how do we represent them?
+
+Well, are there are any {\it free variables}?\\
+
+
+\noindent If the answer is {\bf NO}: Then there is \underline{exactly one solution} that can be read directly from $A'$.
+
+{\bf For example}: 
+If $A'= \left[ \begin {array}{ccc|c} 1&0&0&2\\ 0&1&0&-1
+\\ 0&0&1&3 \\ 0&0&0&0 \end {array} \right]$
+
+Then $x_1=2$, $x_2=-1$ and $x_3=3$.\\
+
+\noindent  If the answer is {\bf YES}: Then there are \underline{infinitely many solutions}.  We just need to know how to write all of the solutions.  They key here is to solve for the {\it basic variables} in terms of the {\it free variables}.\\
+
+{\bf For example}: 
+If $A'= \left[ \begin {array}{cccc|c} 1&-1&0&0&3\\ 0&0&1&0&2
+\\ 0&0&0&0&0 \end {array} \right]$
+
+Here the free variables are $x_2$ and $x_4$ (these can take on any value), and the basic variables are $x_1$ and $x_3$.
+
+Row 2 says $x_3=2$  and row 1 says $x_1-x_2=3$ so in other words $x_1=3+x_2$.
+
+So all solutions to the system are of the form:
+
+\begin{center}
+\begin{align*}
+x_1 &= 3+x_2\\
+x_2 &= \text{Anything}\\
+x_3 &=2\\
+x_4 &= \text{Anything}\\
+\end{align*}
+\end{center}
+
+
+\newpage
+
+{\bf Here are some practice examples with RREF.}  Please try to do them on your own and then check your answers!  
+
+{\bf Simpler Example:}\\
+
+$
+\left[ \begin {array}{ccc|c} 1&-1&1&2\\ -1&2&-1&1
+\\ 2&1&3&0\end {array} \right] 
+\xrightarrow[]{R2\rightarrow R2+R1}
+\left[ 
+\begin {array}{ccc|c} 1&-1&1&2\\ 0&1&0&3
+\\ 2&1&3&0\end {array} \right] 
+\xrightarrow[]{R3\rightarrow R3-2R1} 
+
+
+\left[ \begin {array}{ccc|c} 1&-1&1&2\\ 0&1&0&3
+\\ 0&3&1&-4\end {array} \right] 
+\xrightarrow[]{R3\rightarrow R3-3R2}
+ \left[ 
+\begin {array}{ccc|c} 1&-1&1&2\\ 0&1&0&3
+\\ 0&0&1&-13\end {array} \right] 
+\xrightarrow[]{R1\rightarrow R1+R2}
+ \left[ \begin {array}{ccc|c} 1&0&1&5\\ 0&1&0&3
+\\ 0&0&1&-13\end {array} \right] 
+
+\xrightarrow[]{R1\rightarrow R1-R3}
+ \left[ 
+\begin {array}{ccc|c} 1&0&0&18\\ 0&1&0&3
+\\ 0&0&1&-13\end {array} \right] 
+$
+
+So we have exactly one solution to the system: $x_1 = 18$, $x_2 = 3$ and $x_3=13$.  Now just to make sure that we did not make a mistake we should check our answer...\\
+
+
+{\bf Good Practice with fractions:}\\
+
+$
+ \left[ \begin {array}{ccc|c} 3&1&-1&10\\ 2&1&2&5
+\\ -2&2&3&1\end {array} \right]
+\xrightarrow[]{R2\rightarrow R2-\frac{2}{3}R1}
+\left[ 
+\begin {array}{ccc|c} 3&1&-1&10\\ 0&1/3&8/3&-5/3
+\\ -2&2&3&1\end {array} \right] 
+\xrightarrow[]{R3\rightarrow R3+\frac{2}{3}R1}$
+
+$
+ \left[ \begin {array}{ccc|c} 3&1&-1&10\\ 0&1/3&8/3&-
+5/3\\ 0&8/3&7/3&{\frac {23}{3}}\end {array} \right] 
+\xrightarrow[]{R3\rightarrow R3-8R2}
+\left[ \begin {array}{ccc|c} 3&1&-1&10\\ 0&1/3&8/3&
+-5/3\\ 0&0&-19&21\end {array} \right] 
+\xrightarrow[]{R1\rightarrow \frac{1}{3}R1}$
+
+$
+\left[ \begin {array}{ccc|c} 1&1/3&-1/3&10/3\\ 0&1/3
+&8/3&-5/3\\ 0&0&-19&21\end {array} \right] 
+\xrightarrow[]{R2\rightarrow 3R2}
+\left[ 
+\begin {array}{ccc|c} 1&1/3&-1/3&10/3\\ 0&1&8&-5
+\\ 0&0&-19&21\end {array} \right] 
+\xrightarrow[]{R1\rightarrow R1-\frac{1}{3}R2}
+
+ \left[ \begin {array}{ccc|c} 1&0&-3&5\\ 0&1&8&-5
+\\ 0&0&-19&21\end {array} \right] 
+\xrightarrow[]{R3\rightarrow \frac{-1}{19}R3}
+$
+$
+ \left[ 
+\begin {array}{ccc|c} 1&0&-3&5\\ 0&1&8&-5
+\\ 0&0&1&-{\frac {21}{19}}\end {array} \right] 
+\xrightarrow[]{R1\rightarrow R1+3R3} 
+
+\left[ \begin {array}{ccc|c} 1&0&0&{\frac {32}{19}}
+\\ 0&1&8&-5\\ 0&0&1&-{\frac {21}{
+19}}\end {array} \right] 
+\xrightarrow[]{R2\rightarrow R2-8R3}
+$
+$
+ \left[ \begin {array}{ccc|c} 1&0&0&{\frac {
+32}{19}}\\ 0&1&0&{\frac {73}{19}}
+\\ 0&0&1&-{\frac {21}{19}}\end {array} \right] 
+$
+
+So we have exactly one solution to the system: $x_1 = 32/19$, $x_2 = 73/19$ and $x_3=-21/19$.  Now just to make sure that we did not make a mistake we should check our answer...\\
+
+
+%=======================================================
+
+\end{document}

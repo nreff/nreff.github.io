@@ -1,0 +1,121 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts,empheq}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+
+\definecolor{myblue}{rgb}{.8, .8, 1}
+\newcommand*\mybluebox[1]{%
+\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}}
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 20}\\
+\bf{3.3.2010}
+\end{center}
+
+
+\begin{center}{\LARGE \bf When is a vector ${\bf w}$ in Span($X$)?}.\end{center}
+
+Please review the ``membership test" described in section 3.3.2 starting on p122.  This is the method you can use in order to answer the above question.  Also look at quiz 6 for an example of this type of problem. \\
+
+Take a look at {\bf lemma 3.3.5} on p123.  This gives a nice summary of the ``membership test" (take a look at this again once you know what the column space of $A$ is.  How can we relate this lemma to Col($A$)?).\\
+
+Take a look at {\bf lemma 3.3.6} on p123. This gives us a method for determining if a given set of vectors $X=\{{\bf v}_1, {\bf v}_2, \ldots , {\bf v}_k\}$ spans all of $\mathbb{R}^m$.  In other words we know when Span($X$)=$\mathbb{R}^m$.  This is a good foot in the door to answer the general question of when we having a spanning set of a vector space.  Here we have the answer specifically for the vector space $\mathbb{R}^m$.  But we need to know the answer also for subspaces and general vector spaces as well.\\
+
+{\bf Lemma 3.3.7} gives a very quick method (only in certain situations, look closely!)to say when a set cannot span all of $\mathbb{R}^m$.  For example consider the set:
+
+\[X = \left \{ \left[ \begin{array}{c} 1  \\ -1  \end{array} \right] \right\} \]
+
+Notice there is only one vector in $X$ and $1< 2$. Hence by corollary 3.3.7 $X$ cannot span all of $\mathbb{R}^2$.  Notice however this does not help you in the general case.  We still need to do some row reduction in the general setting.
+
+
+\begin{center}{\LARGE \bf Linear transformations and span}.\end{center}
+
+Since linear transformations behave nicely on linear combinations of vectors it seems reasonable to think that it must behave nicely on the span of a set of vectors $X$ (since the Span($X$) is just the set of all linear combinations of vectors in $X$).  This is what {\bf lemma 3.3.8} essentially gives us.  This can be useful in several situations.  One example is given in exercise (36)1.  The solution provided encourages you to use lemma 3.3.8 and the kernel of a linear transformation (see below).  However don't forget!  If you are ever asked to show a set is a subspace of $\mathbb{R}^n$ you can usually use the shortcut method from {\bf theorem 3.3.2} on p121 unless you are told otherwise.
+
+\begin{center}{\LARGE \bf Column space, null space, image and kernel}.\end{center}
+
+Suppose $A$ is a $m\times n$ matrix.  For the following definitions let's write $A$ in terms of its columns, so we assume $A= \left[ \begin{array}{cccc} {\bf v}_1  & {\bf v}_2 & \ldots & {\bf v}_n   \end{array} \right]$ for some vectors ${\bf v}_i\in \mathbb{R}^m$ where $1\leq i \leq n$.
+
+\begin{center} \underline{{\it Definitions involving the matrix $A$}} \end{center}
+
+The {\it column space} of $A$ denoted Col $A$ or Col($A$) is defined as the set of all linear combinations of the columns of $A$.  In other words:
+
+
+\begin{empheq}[box=\mybluebox]{align*}
+\text{Col } A = \text{Span }(\{ {\bf v}_1 ,{\bf v}_2,\ldots , {\bf v}_n  \}) 
+\end{empheq}
+
+
+The {\it null space} of $A$ denoted Nul $A$ of Nul($A$) is defined as the set of all ${\bf x}\in \mathbb{R}^n$ for which $A {\bf x} = {\bf 0}$.  In other words:
+
+
+
+\begin{empheq}[box=\mybluebox]{align*}
+\text{Nul } A = \{ {\bf x}\in \mathbb{R}^n \mid A{\bf x} = {\bf 0} \}
+\end{empheq}
+
+
+\begin{center} \underline{{\it Definitions involving the linear transformation ${\bf x} \mapsto A{\bf x}$} } \end{center}
+
+Recall the function defined as ${\bf x} \mapsto A{\bf x}$ is a linear transformation from $\mathbb{R}^n$ to $\mathbb{R}^m$. \\
+
+The {\it image} of the linear transformation ${\bf x} \mapsto A{\bf x}$ is the set of all vectors $A{\bf x}$ where ${\bf x}$ is in $\mathbb{R}^n$.  In other words:
+
+\begin{empheq}[box=\mybluebox]{align*}
+\text{image of } {\bf x} \mapsto A{\bf x} = \{ A{\bf x} \mid {\bf x} \in \mathbb{R}^n \}
+\end{empheq}
+
+The {\it kernel} of the linear transformation ${\bf x} \mapsto A{\bf x}$ is the set of all vectors ${\bf x}$ for which $A{\bf x}={\bf 0}$.  In other words:
+
+
+\begin{empheq}[box=\mybluebox]{align*}
+\text{kernel of } {\bf x} \mapsto A{\bf x} = \{ {\bf x}\in \mathbb{R}^n \mid A{\bf x}={\bf 0} \}
+\end{empheq}
+
+
+Exercise (36)5 shows that we actually have:
+
+\begin{align*}
+\text{Col } A &= \text{image of } {\bf x} \mapsto A{\bf x} \\
+\text{Nul } A &= \text{kernel of } {\bf x} \mapsto A{\bf x} 
+\end{align*}
+
+Later we will look at linear transformations in a more general setting.  We will have linear transformations $T:V \rightarrow W$ from a vector space $V$ to a vector space $W$.  Then we can define the image and kernel of $T$ (denoted im($T$) and ker($T$) respectively) just as you would expect.  We will have im($T$)$=\{ T({\bf x}) \mid {\bf x}\in V \}$ and ker($T$)$=\{{\bf x}\in V \mid T({\bf x})={\bf 0} \}$.\\
+
+{\bf Theorem 3.3.9} gives us a nice result.  If you read this theorem and proof carefully we actually do not need to have our vector spaces be $\mathbb{R}^n$ and $\mathbb{R}^m$.  We will have a general result which I will restate for you here:
+\begin{thm}
+Let $T:V \rightarrow W$ be a linear transformation from a vector space $V$ to a vector space $W$.  Then
+\begin{enumerate}
+\item im($T$) is a subspace of $W$.
+\item ker($T$) is a subspace of $V$.
+\end{enumerate}
+\end{thm}
+
+
+
+
+
+
+
+
+%=======================================================
+
+
+\end{document}

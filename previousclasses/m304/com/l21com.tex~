@@ -1,0 +1,105 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts,empheq}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+
+\definecolor{myblue}{rgb}{.8, .8, 1}
+\newcommand*\mybluebox[1]{%
+\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}}
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 21}\\
+\bf{3.4.2010}
+\end{center}
+
+
+\begin{center}{\LARGE \bf Linear Dependence/Independence}.\end{center}
+
+A collection of vectors $X$ is {\it linearly dependent} if there exists a finite number of vectors ${\bf v}_1,{\bf v}_2,\ldots,{\bf v}_k$ in $X$ and scalars $\alpha_1,\alpha_2,\ldots,\alpha_k$ not all zero, such that 
+
+\[ \alpha_1 {\bf v}_1 + \alpha_2 {\bf v}_2 + \ldots + \alpha_k {\bf v}_k = {\bf 0} \]
+
+This linear combination is called a {\it linear dependence relation} (on $X$).
+
+{\bf Example 1:} Consider the set 
+
+\[X = \left\{ \left[ \begin{array}{r} 1  \\ -1  \end{array} \right], \left[ \begin{array}{r} 2  \\ -2  \end{array} \right], \left[ \begin{array}{r} 5  \\ \pi  \end{array}\right] \right\} \]
+
+$X$ is linearly dependent since we can write the following linear dependence relation:
+
+\[ 2\left[ \begin{array}{r} 1  \\ -1  \end{array} \right] + (-1) \left[ \begin{array}{r} 2  \\ -2  \end{array} \right] + 0 \left[ \begin{array}{r} 5  \\ \pi  \end{array} \right] = \left[ \begin{array}{r} 0  \\ 0  \end{array} \right] = {\bf 0} \]
+
+Take a close look at this example and the definition of linear dependence.  We have a linear combination of a finite number of vectors in $X$ which is equal to the zero vector and the coefficients are not all equal to zero.  So notice there are many other linear dependence relations on the set $X$.  For example:
+
+\[ 2\left[ \begin{array}{r} 1  \\ -1  \end{array} \right] + (-1) \left[ \begin{array}{r} 2  \\ -2  \end{array} \right] = \left[ \begin{array}{r} 0  \\ 0  \end{array} \right] = {\bf 0} \]
+
+\noindent is acceptable since the definition only required a finite number of vectors from $X$ (and not necessarily all of them).  Another linear dependence relation on $X$ would be:
+
+\[ 4 \left[ \begin{array}{r} 1  \\ -1  \end{array} \right] + (-2) \left[ \begin{array}{r} 2  \\ -2  \end{array} \right] + 0 \left[ \begin{array}{r} 5  \\ \pi  \end{array} \right] = \left[ \begin{array}{r} 0  \\ 0  \end{array} \right] = {\bf 0}. \]
+
+Here is a linear combination of vectors from $X$ which is not considered a linear dependence relation:
+
+\[ 0\left[ \begin{array}{r} 1  \\ -1  \end{array} \right] + 0 \left[ \begin{array}{r} 2  \\ -2  \end{array} \right] + 0 \left[ \begin{array}{r} 5  \\ \pi  \end{array} \right] = \left[ \begin{array}{r} 0  \\ 0  \end{array} \right] = {\bf 0} \]
+
+Why?  This is because all of the coefficients are 0 and in the definition of linear dependence we require that at least one of the coefficients to be nonzero (i.e. there is some $\alpha_i \neq 0$).  It should seem reasonable why we require at least one of the $\alpha_i \neq 0$ because otherwise we would always have linear dependence and it would make no sense to just define something for the fun of it (even though you might be thinking that is what all mathematicians do).
+
+{\bf Example 2:} The set $X=\{ {\bf 0} \}$ where ${\bf 0}\in \mathbb{R}^n$ is always linearly dependent.  There are many linear depdence relations for example $5 \cdot {\bf 0}={\bf 0}$.  In fact you can make an even more general statement that any set containing the set ${\bf 0}$ must be linearly dependent.  Why?
+
+A collection of vectors $X$ is {\it linearly independent} if it is not {\it linearly dependent}.  This means whenever $\alpha_1,\alpha_2,\ldots,\alpha_k$ are scalars such that 
+
+\[ \alpha_1 {\bf v}_1 + \alpha_2 {\bf v}_2 + \ldots + \alpha_k {\bf v}_k = {\bf 0} \]
+
+then $\alpha_1=\alpha_2=\ldots=\alpha_k=0$.
+
+{\bf Example 3:} Consider the set 
+
+\[X = \left\{ \left[ \begin{array}{r} 1  \\ 0  \end{array} \right], \left[ \begin{array}{r} 0  \\ 1  \end{array} \right] \right\} \]
+
+$X$ is linearly independent. Why?
+
+
+We have seen many nice properties about linearly independent and linearly dependent sets.  We also had a method for determining if a set of vectors in $\mathbb{R}^n$ is linearly independent.  This was discussed in class and on p 129 of the text.  
+
+{\bf Corollary 3.4.5} gives a very quick method (only in certain situations, look closely!) to say when a set cannot be linearly independent.  Our original example is one of these situations.  If
+
+\[X = \left\{ \left[ \begin{array}{r} 1  \\ -1  \end{array} \right], \left[ \begin{array}{r} 2  \\ -2  \end{array} \right], \left[ \begin{array}{r} 5  \\ \pi  \end{array}\right] \right\} \]
+
+Then $X$ is immediately linearly dependent since the vectors live in $\mathbb{R}^2$ and there are three vectors in $X$.  So since $3>2$ by corollary 3.4.5 we have $X$ is linearly dependent.  Notice however this does not help you in the general case.  We still need to do some row reduction in the general setting (again see the ``test for linear independence" on p129). \\
+
+For example you need to do some work to solve most of the problems in exercise (38) on p130.\\
+
+The nice thing about this test for linear independence is that we have once again just turned the problem into a problem in terms of matrices.
+
+
+
+
+
+
+
+
+
+
+
+
+
+%=======================================================
+
+
+\end{document}

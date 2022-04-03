@@ -1,0 +1,28 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Homework 13}\\
+\bf{Calculus I - Fall 2009}
+\end{center}
+
+The following is the bare minimum number of problems you need to do.  If you need more practice please try to do all positive multiples of 3 (except 36).\\
+
+{\bf 6.1:}  2,4,6,8,10,12,20\\
+
+
+\vspace{.5 in.}
+%=======================================================
+\end{document}

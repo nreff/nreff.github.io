@@ -1,0 +1,111 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 41}\\
+\bf{4.16.2010}
+\end{center}
+
+Suppose $V$ is some finite dimensional vector space and $B=({\bf v}_1, {\bf v}_2,\ldots,{\bf v}_n )$ is an ordered basis of $V$.  Recall this means we have an isomorphism $K_B{:}V\rightarrow \mathbb{R}^n$ (The coordinate transformation).  In the following we consider ${\bf u}\in V$.
+
+\begin{center} Read 4.5 and 4.6, especially {\bf General Lemma 4.5.10} \end{center}
+
+\noindent \fbox{How to find the coordinate vector $K_{B}({\bf u})$ given ${\bf u}$}\\
+
+Suppose you are given ${\bf u}$ and are asked to find $K_B({\bf u})$ (the coordinate vector of ${\bf u}$ with respect to the basis $B$).  To solve this problem you need to first write ${\bf u}$ as a linear combination of the elements of the basis $B$:
+
+\[{\bf u} = {\color{Red} c_1} {\bf v}_1 + {\color{Red} c_2} {\bf v}_2+\cdots + {\color{Red} c_n} {\bf v}_n \]
+
+Once you have done this we have
+
+\[ K_B({\bf u}) = \left[\begin{array}{l} {\color{Red} c_1} \\ {\color{Red} c_2} \\ \vdots \\ {\color{Red} c_n} \end{array} \right] \].
+
+i.e., we just peel the coefficients off the linear combination we found and create a vector in $\mathbb{R}^n$ with the correct ordering.  Warning:  The order does matter so be careful!  NOTE: The real task is writing ${\bf u}$ as a linear combination of the elements in $B$ (this can take some work!).  See examples below.\\
+
+\noindent \fbox{How to find ${\bf u}$ given the coordinate vector $K_{B}({\bf u})$} (EASY PROBLEM)
+
+Suppose you are given the coordinate vector $K_{B}({\bf u})=\left[\begin{array}{l} {\color{Red} c_1} \\ {\color{Red} c_2} \\ \vdots \\ {\color{Red} c_n} \end{array} \right]$ of some unknown vector ${\bf u}$ that you must find.  Well by definition we have
+
+\[{\bf u} = {\color{Red} c_1} {\bf v}_1 + {\color{Red} c_2} {\bf v}_2+\cdots + {\color{Red} c_n} {\bf v}_n \]
+
+{\bf Example 1:} Suppose $V=P_3$ and $B=(1,x,x^2,x^3)$.  Find $K_B(1-x+2x^3)$.\\
+{\it Solution:} Here we have ${\bf u}=1-x+2x^3$. To solve this problem we need to write ${\bf u}$ as a linear combination of the basis elements in $B$.  Since $B$ is such a simple basis of $P_3$ we don't have to do much work.  We have ${\bf u}=1-x+2x^3 = {\color{Red} (1)}(1)+{\color{Red} (-1)}(x)+{\color{Red} (0)}(x^2)+{\color{Red} (2)}(x^3)$.  So this means $K_B({\bf u}) = \left[\begin{array}{r} {\color{Red} 1} \\ {\color{Red} -1} \\ {\color{Red} 0} \\ {\color{Red} 2} \end{array} \right]$.
+
+{\bf Example 2:} Suppose $V=P_2$ and $S=(p_1(x)=2-2x-x^2,p_2(x)=1+x-x^2,p_3(x)=3-x+3x^2)$.
+\begin{enumerate}
+\item Show that $S$ is a basis of $P_2$.
+\item Find $K_S(3+4x-x^2)$.
+\item Find $p(x)$ if $K_S(p(x))=  \left[\begin{array}{r} 1\\2\\3 \end{array}\right]$
+\end{enumerate}
+{\it Solution:}
+\begin{enumerate}
+\item Consider the ordered basis $T=(1,x,x^2)$ of $P_2$.  Why do I need this basis?  Well, to solve this problem I will use General Lemma 4.5.10(g) on p179:
+
+\[ S \text{ is a finite basis for } P_2 \iff K_T(S) \text{ is a finite basis for } \mathbb{R}^3 \]
+
+So now we are just going to work in $\mathbb{R}^3$ and show $K_T(S)=(K_T(p_1(x)),K_T(p_2(x)),K_T(p_3(x)))$ is a basis of $\mathbb{R}^3$.  First we need to find  $K_T(p_1(x))$,$K_T(p_2(x))$ and $K_T(p_3(x))$.  Now it should be clear why we chose the basis $T$ to work with.  These coordinate vectors are as follows:
+\begin{center}
+$K_S(p_1(x))=  \left[\begin{array}{r} 2\\-2\\-1 \end{array}\right], K_S(p_2(x))=  \left[\begin{array}{r} 1\\1\\-1 \end{array}\right] \text{ and } K_S(p_3(x))=  \left[\begin{array}{r} 3\\-1\\3 \end{array}\right]$
+\end{center}
+Now show these three coordinate vectors form a basis in $\mathbb{R}^3$.  We work with the matrix $A=\left[ \begin{array}{lll} K_T(p_1(x))& K_T(p_2(x)) & K_T(p_3(x)) \end{array} \right]$. (STOP! Now it should be clear why we keep constructing this kind of matrix when solving this kind of problem.  Make sure you understand what the goal is!).
+
+\[ A= \left[ \begin {array}{rrr} 2&1&3\\ -2&1&-1
+\\ -1&-1&3\end {array} \right]
+\xrightarrow[]{ \text{Putting }A \text{ into RREF} } \left[ \begin {array}{rrr} 1&0&0\\ 0&1&0
+\\ 0&0&1\end {array} \right] 
+\]
+
+Hence $A$ is invertible.  So this means the set $K_T(S)$ is a basis of $\mathbb{R}^3$, and since $K_T$ is an isomorphism we have that $S$ is a basis of $P_2$.
+
+\item This problem is going to require much more work than what we did in example 1.  Notice here it is not obvious how to write $3+4x-x^2$ in terms of the basis $S$.  Again we use the isomorphism $K_T$ to turn this into a problem in $\mathbb{R}^3$.  Notice we can write $K_T(3+4x-x^2)=  \left[\begin{array}{r} 3\\4\\-1 \end{array}\right]$.  Now we try to write this vector as a linear combination of the vectors in the basis $K_T(S)$ (This is the kind of problem you solved in chapter 3).  In other words we want to solve this equation:
+\begin{center}
+$c_1 \left[\begin{array}{r} 2\\-2\\-1 \end{array}\right]+ c_2 \left[\begin{array}{r} 1\\1\\-1 \end{array}\right] + c_3  \left[\begin{array}{r} 3\\-1\\3 \end{array}\right] = \left[\begin{array}{r} 3\\4\\-1 \end{array}\right]$
+\end{center}
+This is just solving the system:
+\begin{center}
+$A= \left[ \begin {array}{rrr} 2&1&3\\ -2&1&-1
+\\ -1&-1&3\end {array} \right] \left[\begin{array}{r} c_1\\c_2\\c_3 \end{array}\right] = \left[\begin{array}{r} 3\\4\\-1 \end{array}\right]$
+\end{center}
+Solving this system:
+\[ A= \left[ \begin {array}{rrr|r} 2&1&3&3\\ -2&1&-1&4
+\\ -1&-1&3&-1\end {array} \right]
+\xrightarrow[]{ \text{Putting }A \text{ into RREF} } \left[ \begin {array}{rrr|r} 1&0&0&-7/10\\ 0&1&0&61/20
+\\ 0&0&1&9/20\end {array} \right] 
+\]
+So $c_1=-7/10, c_2=61/20,$ and $c_3=9/20$.  This is gives us 
+\begin{center}
+$K_S(3+4x-x^2)=  \left[\begin{array}{r} {\color{Red}-7/10}\\{\color{Red} 61/20}\\{\color{Red} 9/20} \end{array}\right]$.
+\end{center}
+You can see this is the correct answer since: $3+4x-x^2={\color{Red}(-7/10)}(2-2x-x^2)+{\color{Red} (61/20)}(1+x-x^2)+{\color{Red} (9/20)}(3-x+3x^2)$
+ 
+\item This problem is very quick, we have
+\begin{align*}
+p(x) &= 1 p_1(x) + 2 p_2(x) + 3 p_3(x) \\
+ &= 1(2-2x-x^2) + 2(1+x-x^2) + 3(3-x+3x^2) \\
+&= 2-2x-x^2+2+2x-2x^2+9-3x+9x^2 \\
+&= 13-3x+6x^2
+\end{align*}
+Make sure you see the difference between this problem and the previous one.
+\end{enumerate}
+%=======================================================
+
+\end{document}

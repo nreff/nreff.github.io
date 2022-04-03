@@ -1,0 +1,125 @@
+
+
+h1.mhead  {
+	font-variant: small-caps;
+	font-style: normal;
+	font-weight:300;
+	background-color:#4F94CD;
+ 
+	border: 1px solid #000000;
+	margin: 0px;
+	padding: 0 0 0 1em;
+	
+	}
+
+.info  {
+   margin-left: 0px;
+   font-family: times; 
+	font-size: 110%;
+  	background-color: #e2e0d4;
+	border: 1px solid #000000;
+	padding: 0 0 0 1em;
+       }
+
+.info2  {
+   margin-left: 0px;
+   font-family: times; 
+	font-size: 110%;
+  	background-color: #ff8455;
+	border: 1px solid #000000;
+	padding: 0 0 0 1em;
+       }
+
+.info3  {
+   margin-left: 0px;
+   font-family: times; 
+	font-size: 110%;
+  	background-color: #33CC66;
+	border: 1px solid #000000;
+	padding: 0 0 0 1em;
+       }
+
+.infoY  {
+   margin-left: 0px;
+   font-family: times; 
+	font-size: 110%;
+  	background-color: #FFFFC2;
+	border: 1px solid #000000;
+	padding: 0 0 0 1em;
+       }
+
+.infoW  {
+   margin-left: 0px;
+   font-family: times; 
+	font-size: 110%;
+  	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	padding: 0 0 0 1em;
+       }
+
+.info b {
+        font-variant: small-caps;
+	font-weight: 300;
+        }
+
+.info a {
+        text-decoration: none;
+        }
+
+.info th {
+        font-variant: small-caps;
+	font-weight: 300;
+	text-align: left;
+        }
+
+.infoY b {
+        font-variant: small-caps;
+	font-weight: 300;
+        }
+
+.infoY a {
+        text-decoration: none;
+        }
+
+.infoY th {
+        font-variant: small-caps;
+	font-weight: 300;
+	text-align: left;
+        }
+
+.infoW b {
+        font-variant: small-caps;
+	font-weight: 300;
+        }
+
+.infoW a {
+        text-decoration: none;
+        }
+
+.infoW th {
+        font-variant: small-caps;
+	font-weight: 300;
+	text-align: left;
+        }
+
+.info3 b {
+        font-variant: small-caps;
+	font-weight: 300;
+        }
+
+.info3 a {
+        text-decoration: none;
+        }
+
+.info3 th {
+        font-variant: small-caps;
+	font-weight: 300;
+	text-align: left;
+        }
+
+#container {
+       margin-left:0px;
+       margin-right:0px;
+       padding-left:0em;
+       }
+

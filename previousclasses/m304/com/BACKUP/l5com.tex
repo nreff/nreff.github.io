@@ -1,0 +1,70 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx}
+
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 5}\\
+\bf{2.1.2010}
+\end{center}
+
+\begin{center}
+{\bf Rank}.  
+\end{center}
+\noindent Please read p27-28 again.  The rank will be used several times throughout this course.
+
+\begin{center}
+{\bf Homogeneous Linear Systems}.  
+\end{center}
+
+\noindent Recall that a linear equation is said to be {\it homogeneous} if it is of the the form:
+
+\[ c_1 x_1 + c_2 x_2 + \ldots + c_n x_n = 0\]
+
+\noindent (One could think of this geometrically as a hyperplane through the origin).
+
+\noindent We say that a system of linear equations is {\it homogeneous} if each equation in the system is homogeneous.  So the system would be of the form:
+
+\begin{align*}
+c_{11} x_1 + c_{12} x_2 + \ldots + c_{1n} x_n &= 0 \\
+c_{21} x_1 + c_{22} x_2 + \ldots + c_{2n} x_n &= 0 \\
+\vdots \hspace{3pc} \vdots \hspace{3pc} \vdots \hspace{3pc} &= \vdots \\
+c_{m1} x_1 + c_{m2} x_2 + \ldots + c_{mn} x_n &= 0 \\
+\end{align*}
+
+\noindent Observe that every homogeneous systems must be consistent, since
+
+\[x_1 =0 , x_2=0, \ldots, x_n=0 \]
+
+\noindent is always a solution to the system (this is called the {\it trivial solution}).
+
+\noindent Also observe that if a homogeneous system of linear equations has a {\it nontrivial solution}
+
+\[x_1 =s_1 , x_2=s_2, \ldots, x_n=s_n \]
+
+\noindent then it must have infinitely many solutions, since
+
+\[x_1 =z s_1 , x_2=z s_2, \ldots, x_n=z s_n \]
+
+\noindent is also a solution for any real number $z$ (Check this yourself!).  From this we get the following theorem:
+
+\begin{thm}  A homogeneous system of linear equations has only the trivial solution or it has infinitely many solutions; there are no other possibilities.
+\end{thm}
+
+\noindent Please read 1.5 for more results we had on homogeneous systems of linear equations.
+%=======================================================
+
+\end{document}

@@ -1,0 +1,165 @@
+\documentclass[reqno]{amsart}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{eucal}
+\usepackage{graphicx,psfrag}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{verbatim} 
+\usepackage{empheq}
+\usepackage{color}
+
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{cor}[lem]{Corollary}
+\newtheorem{prop}[lem]{Proposition}
+\newtheorem{thm}[lem]{Theorem}
+\newtheorem{eg}[lem]{Example}
+
+\definecolor{myblue}{rgb}{.8, .8, 1}
+\newcommand*\mybluebox[1]{\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}}
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
+
+\numberwithin{equation}{section}
+
+\newcommand\tr{\mathrm{tr}}
+\newcommand\bip{\mathrm{bip}}
+\newcommand\rank{\operatorname{rank}}
+\begin{document}
+
+\title{8.1 Integration by Parts}
+
+\author{Nathan Reff}
+\address{Department of Mathematics\\Alfred University\\ Alfred, NY 14802, U.S.A.}
+\email{reff@alfred.edu}
+
+\date{\today}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integration by Parts}
+
+Recall:
+\[ \frac{d}{dx} [f(x)g(x)] = f'(x)g(x)+f(x)g'(x). \]
+Integrate both sides
+\begin{align*}
+f(x)g(x)+C &= \int [f'(x)g(x)+f(x)g'(x)] dx \\
+f(x)g(x)+C &= \int f'(x)g(x) dx + \int f(x)g'(x) dx \\
+\intertext{so}
+\int f(x)g'(x) &= f(x)g(x) - \int f'(x)g(x) dx +C.
+\end{align*}
+Let's ignore the arbitrary constant since the remaining integral will introduce an abritrary constant anyways.
+
+If we let $u=f(x)$ and $v=g(x)$ then:
+
+\begin{empheq}[box=\widefbox]{align}
+ \int u dv = uv - \int v du. 
+\end{empheq}
+
+For definite integrals:
+
+\begin{empheq}[box=\widefbox]{align}
+ \int_a^b u dv = \left[uv\right]_a^b - \int_a^b v du.
+\end{empheq}
+
+\begin{eg} $\int x\cos(x) dx.$
+$u=x$, $dv=\cos(x) dx$\\
+$du=dx$, $v=\sin(x)$\\
+and so 
+\begin{align*} \int x \cos(x) dx &= x \sin(x) - \int \sin(x) dx \\
+&= x \sin(x) - (-\cos(x)) +C\\
+&= x \sin(x) + \cos(x) +C.
+\end{align*}
+\end{eg}
+
+Sometimes we must do the method twice in the integration.
+
+\begin{eg} $\int x^2 e^x dx$
+
+\begin{center}
+  \begin{tabular}{ r||l}
+    $u=x^2$ & $dv=e^x dx$ \\ 
+    $du=2xdx$ & $v=e^x$\\ 
+  \end{tabular}
+\end{center}
+
+
+and so 
+\begin{align*} \int  x^2 e^x dx &= x^2 e^x - \int e^x 2x dx \\
+&= x^2 e^x - 2\int xe^x  dx. 
+\end{align*}
+We must use integratin by parts again.
+
+here\\
+\begin{center}
+  \begin{tabular}{ r||l}
+    $u=x$ & $dv=e^x dx$ \\ 
+    $du=dx$ & $v=e^x$\\ 
+  \end{tabular}
+\end{center}
+
+so 
+\begin{align*} \int  x^2 e^x dx &= x^2 e^x - 2\int xe^x  dx \\
+&=  x^2 e^x - 2 \left[xe^x - \int e^x dx \right] \\
+&=  x^2 e^x - 2 \left[xe^x - e^x +C \right] \\
+&= x^2 e^x - 2x e^x +2e^x +D.
+\end{align*}
+\end{eg}
+
+Sometimes we use integration by parts and $dv=du$ and $u=$the rest...
+
+\begin{eg} Consider $\int \ln(x) dx$ or $\int \tan^{-1}(x)dx$.
+\end{eg}
+
+Sometimes we use integration by parts and the integral we are solving for appears...then we use algebra!
+
+\begin{eg} $\int e^x \sin(x)dx$.
+Let
+\begin{center}
+  \begin{tabular}{ r||l}
+    $u=e^x$ & $dv=\sin(x) dx$ \\ 
+    $du=e^xdx$ & $v=-\cos(x)$\\ 
+  \end{tabular}
+\end{center}
+
+\begin{align*} \int e^x \sin(x)dx &= e^x(-\cos(x)) - \int (-\cos(x))e^x dx \\
+&= -e^x\cos(x) + \int e^x\cos(x) dx
+\end{align*}
+Use integration by parts again:
+
+\begin{center}
+  \begin{tabular}{ r||l}
+    $u=e^x$ & $dv=\cos(x) dx$ \\ 
+    $du=e^xdx$ & $v=\sin(x)$\\ 
+  \end{tabular}
+\end{center}
+
+\begin{align*} \int e^x \sin(x)dx &= -e^x\cos(x) + \int e^x\cos(x) dx \\
+&= -e^x\cos(x) + \left[ e^x \sin(x) - \int \sin(x) e^x dx \right]\\
+&= -e^x\cos(x) + e^x \sin(x) - \int e^x \sin(x)  dx.
+\end{align*}
+Notice we have the integral we are trying to solve on the right.   Bring it over to the left, join the party via algebra.  So we have:
+\[2 \int e^x \sin(x)dx =-e^x\cos(x) + e^x \sin(x). \]
+Therefore,
+ \[\int e^x \sin(x)dx =\frac{-e^x\cos(x) + e^x \sin(x)}{2} +C. \]
+\end{eg}
+
+\begin{eg} $\int_1^e \ln(x) dx$.
+
+Let
+\begin{center}
+  \begin{tabular}{ r||l}
+    $u=\ln(x)$ & $dv=dx$ \\ 
+    $du=\frac{1}{x}dx$ & $v=x$\\ 
+  \end{tabular}
+\end{center}
+
+\begin{align*} \int_1^e \ln(x)dx &= \left[x\ln(x)\right]_1^e - \int_1^e x \cdot \frac{1}{x}dx \\
+&= [x\ln(x)]_1^e - \int_1^e 1 dx \\
+&= [x\ln(x)-x]_1^e \\
+&= (e \ln(e) - e) - (1 \ln(1) -1) \\
+&= (e-e)-(0-1) = 1. 
+\end{align*}
+\end{eg}
+
+
+
+\end{document}

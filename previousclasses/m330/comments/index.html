@@ -1,0 +1,165 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head> 
+ 
+ 
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"> 
+<title>Math 330 - Comments</title> 
+ 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<style type="text/css"> 
+/*<![CDATA[*/
+@import "m330.css";
+/*]]>*/
+</style> 
+ 
+<style type="text/css"> 
+/*<![CDATA[*/
+ body {
+  background-color: #FFFFFF;
+ }
+ span.c1 {font-size: 80%}
+/*]]>*/
+</style> 
+</head><body> 
+<h1 class="mhead">Comments</h1> 
+<br> 
+
+
+<div class="info"> 
+<b>Membership vs. Subset</b> 
+<table width="70%"> 
+<tbody>
+<tr><td><br>
+Let $A$ and $B$ be sets whose elements come from some set $X$.
+<li> $x\in A$ means $x$ is an <i>element</i> (or <i>member</i>) of $A$.
+</li> 
+<li> $x\notin A$ means $x$ is not an element of $A$.
+</li> 
+<li> $A\subseteq B$ means $A$ is a <i>subset</i> of $B$; that is, if $x\in A$, then $x\in B$.  
+<dd><b>Formally written:</b> $\forall x\in X,$ if $x\in A$, then $x\in B$.</dd>
+</li>
+<li> $A\not\subseteq B$ means $A$ is not a subset of $B$. 
+<dd><b>Formally written:</b> $\exists x\in X$ such that, $x\in A$ and $x\notin B$. (N.B. You should agree with this definition, see Section 3.3 on Negations.)
+</li>
+</td></tr> 
+</tbody></table> 
+
+<table width="70%"> 
+<tbody>
+<tr><td><br>
+<b>Examples using the symbols '$\in$' and '$\notin$':</b>
+<li> $1\in \{1\}$.
+</li> 
+<li> $3\notin \{1\}$.
+</li> 
+<li> $1\in \{1,2\}$.
+</li> 
+<li> $1\in \mathbb{N}$.
+</li> 
+<li> $0\notin \mathbb{N}$.
+</li> 
+<li> $0\in \mathbb{Z}_{\geq 0}$.
+</li> 
+<li> $\spadesuit\in \{\heartsuit, \spadesuit, \diamondsuit, \clubsuit\}$.
+</li> 
+<li> $\omega\notin \{\heartsuit, \spadesuit, \diamondsuit, \clubsuit\}$.
+</li> 
+<li> $\{0\}\in \{\{0\},\heartsuit\}$.
+</li> 
+<li> $0\notin \{\{0\},\heartsuit\}$.
+</li> 
+<li> $1\notin \varnothing$.
+</li> 
+<li> $\varnothing\notin \varnothing$.
+</li> 
+<li> $\varnothing\in \{\varnothing\}$.
+</li> 
+<li> $\{\varnothing\}\notin \{\varnothing\}$.
+</li> 
+<li> $\varnothing\in \{\varnothing,\{\varnothing\}\}$.
+</li> 
+<li> $\{\varnothing\}\in \{\varnothing,\{\varnothing\}\}$.
+</li> 
+</td></tr>
+</tbody></table> 
+
+<table width="70%"> 
+<tbody>
+<tr><td><br>
+<b>Examples using the symbol '$\subseteq$' and '$\not\subseteq$':</b>
+<li> $\{1\}\subseteq \{1\}$.
+</li>
+<li> $\{3\}\not\subseteq \{1\}$. (This is because there exists an element of $\{3\}$, namely $3$, that is not an element of $\{1\}$.)
+</li> 
+<li> $\{1\}\subseteq \{1,2\}$.
+</li>
+<li> $\{1\}\subseteq \mathbb{N}$.
+</li> 
+<li> $\{0\}\not\subseteq \mathbb{N}$.
+</li> 
+<li> $\{0\}\subseteq \mathbb{Z}_{\geq 0}$.
+</li> 
+<li> $\{\spadesuit\}\subseteq \{\heartsuit, \spadesuit, \diamondsuit, \clubsuit\}$.
+</li> 
+<li> $\{\omega\}\not\subseteq \{\heartsuit, \spadesuit, \diamondsuit, \clubsuit\}$.
+</li> 
+<li> $\{\{0\}\}\subseteq \{\{0\},\heartsuit\}$.
+</li> 
+<li> $\{0\}\not\subseteq \{\{0\},\heartsuit\}$.
+</li> 
+<li> $\{1\}\not\subseteq \varnothing$.
+</li> 
+<li> $\varnothing\subseteq \varnothing$.
+</li> 
+<li> Proposition 5.7. For any set $A$, $\varnothing\subseteq A$.
+</li> 
+<li> $\varnothing\subseteq \{\varnothing\}$.
+</li> 
+<li> $\{\varnothing\}\subseteq \{\varnothing\}$.
+</li> 
+<li> $\varnothing\subseteq \{\varnothing,\{\varnothing\}\}$.
+</li> 
+<li> $\{\varnothing\}\subseteq \{\varnothing,\{\varnothing\}\}$.
+</li> 
+<li> $\{\{\varnothing\}\}\subseteq \{\varnothing,\{\varnothing\}\}$.
+</li> 
+<li> $\{\{\{\varnothing\}\}\}\not\subseteq \{\varnothing,\{\varnothing\}\}$.
+</li> 
+</td></tr>
+</tbody></table> 
+<br>
+
+</div> 
+<br>
+
+
+<br>
+</div>
+
+<a href="http://www.mathjax.org/">
+  <img title="Powered by MathJax"
+       src="http://www.mathjax.org/badge.gif"
+       border="0" alt="Powered by MathJax" />
+</a>
+
+<script type="text/javascript">
+var sc_project=7640674; 
+var sc_invisible=1; 
+var sc_security="920e95e8"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="customisable
+counter" href="http://statcounter.com/free-hit-counter/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/7640674/0/920e95e8/1/"
+alt="customisable counter"></a></div></noscript>
+
+</body></html> 

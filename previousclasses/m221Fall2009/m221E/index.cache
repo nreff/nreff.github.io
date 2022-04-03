@@ -1,0 +1,11 @@
+serveall=true
+
+file=formulash.pdf&content=application/pdf&title=File formulash.pdf
+file=#index.html#&content=text/plain; charset=iso-8859-1&title=File #index.html#
+file=quiz12.pdf&content=application/pdf&title=File quiz12.pdf
+file=m221.css&content=text/css; charset=iso-8859-1&title=File m221.css
+file=quiz12.tex&content=application/x-tex&title=File quiz12.tex
+file=quiz12.aux&content=text/plain; charset=iso-8859-1&title=File quiz12.aux
+file=index.html&content=text/html; charset=iso-8859-1&title=Math 221
+file=quiz12.log&content=text/plain; charset=iso-8859-1&title=File quiz12.log
+file=m221.pdf&content=application/pdf&title=File m221.pdf

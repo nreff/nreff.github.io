@@ -1,0 +1,53 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx, graphics}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{darkyellow}{rgb}{.929412,.8314,0}
+\definecolor{brightgreen}{rgb}{.439,.824,.0863}
+
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 11}\\
+\bf{2.11.2010}
+\end{center}
+
+
+\noindent We are continuing our study of the function that an $m \times n$ matrix $C$ determinds from $\mathbb{R}^n$ to $\mathbb{R}^m$.  Again we view this functions as multiplication on the left by $C$:
+
+\begin{center}
+\fbox{${\bf x}\mapsto C{\bf x}$}
+\end{center}
+
+Where ${\bf x}$ is some arbitary vector in $\mathbb{R}^n$.  Today we showed that this function is indeed a {\it linear transformation}.  This means that for any vectors ${\bf x}$ and ${\bf y}$ in $\mathbb{R}^n$, and for any scalar $k$ in $\mathbb{R}^n$ the following two things are satisfied:
+
+\begin{enumerate}
+\item $C({\bf x}+{\bf y})=C({\bf x})+C({\bf y})$
+\item $C(k{\bf x})=kC({\bf x})$
+\end{enumerate}
+
+\noindent See {\bf Theorem 2.5.1} and {\bf Theorem 2.5.2}.
+
+\noindent So now we can say that if $C$ is an $m \times n$ matrix, then ${\bf x}\mapsto C{\bf x}$ is a linear transformation from $\mathbb{R}^n$ to $\mathbb{R}^m$.\\
+
+\noindent On Friday we will establish quite an amazing converse to this statement:  suppose $T$ is a linear transformation from $\mathbb{R}^n$ to $\mathbb{R}^m$, then there is a unique $m \times n$ matrix $B$ so that $T({\bf x})=B{\bf x}$ for every ${\bf x}$ in $\mathbb{R}^n$.
+
+
+
+
+%=======================================================
+
+\end{document}

@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Math 221</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+@import "m221.css";
+/*]]>*/
+</style>
+
+<style type="text/css">
+/*<![CDATA[*/
+ body {
+  background-color: #F0ECE0;
+ }
+ span.c1 {font-size: 80%}
+/*]]>*/
+</style>
+</head>
+<body>
+<h1 class="mhead">Math 221-15 - Calculus I - Fall 2009</h1>
+<div id="container"><br />
+<div class="info">
+<table>
+<tbody>
+<tr>
+<td><b>Instructor:</b> Nate Reff</td>
+</tr>
+<tr>
+<td><b>Office:</b> LN 2243</td>
+</tr>
+<tr>
+<td><b>Calculus Help Room:</b> LN 2216</td>
+</tr>
+<tr>
+<td><b>Email:</b> reff at math dot binghamton dot edu</td>
+</tr>
+<tr>
+<td colspan="2"><b>Course Meetings:</b> MWF 9:40-10:40, T 8:30-9:55 in SW 329</td>
+</tr>
+<tr>
+<td><b>Office Hours:</b> T 10-11:30, 2:30-3 in LN 2216, T 3-3:30 and R 12:45-1:15 in LN 2243</td>
+</tr>
+<tr>
+<td><b>Textbook:</b> <em>Calculus, 6th Ed.</em>, by Stewart <span class="c1">(ISBN-13: 978-0495011606)</span></td>
+</tr>
+<tr>
+<td><b>Syllabus:</b> <a href="m221.pdf">pdf</a></td>
+</tr>
+<tr>
+<td><b>Department Calculus I Website:</b> <a href="http://www.math.binghamton.edu/calc1/">http://www.math.binghamton.edu/calc1/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br />
+
+
+
+<div class="info">
+<b>Calculus Placement Test</b>
+<table width="70%">
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td> <li><b>You must pass the placement test to register for calculus</b>.  Here is the website for the <a href="http://www.math.binghamton.edu/Calculus/PlacementTest.html">calculus placement test</a>.  All the information you will need is on that website including the <a href="http://www.math.binghamton.edu/Calculus/PlacementTestSchedule.html">schedule</a>. </li></td>
+</tr>
+</table>
+</div>
+<br/>
+<div class="info">
+<b>Homework</b>
+<table width="70%">
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td> <li><a href="http://www.math.binghamton.edu/grads/reff/m221/m221H/m221f09h1.pdf">Homework 1</a>. </li></td>
+</tr>
+<tr>
+<td> <li><a href="http://www.math.binghamton.edu/grads/reff/m221/m221H/m221f09h2.pdf">Homework 2</a>. </li></td>
+</tr>
+</table>
+</div>
+<br/>
+<div class="info">
+<b>Quiz Solutions</b>
+<table width="70%">
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td> <li><a href="http://www.math.binghamton.edu/grads/reff/m221/m221Q/m221f09q1.pdf">Quiz 1</a>. </li></td>
+</tr>
+<tr>
+<td> <li><a href="http://www.math.binghamton.edu/grads/reff/m221/m221Q/m221f09q2.pdf">Quiz 2</a> and the <a href="http://www.math.binghamton.edu/grads/reff/m221/m221Q/q2graph.pdf">graph</a>. </li></td>
+</tr>
+</table>
+</div>
+
+<br />
+
+<div class="info">
+<b>Other Educational Resources</b>
+<table width="70%">
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td><li> Hands down, <a href="http://www.wikipedia.org/">Wikipedia</a> is a great and well maintained resource when looking for a basic rundown of a topic, especially in mathematics.  Also check out other <a href="http://www.wikimedia.org/">Wikimedia</a> projects.</li></td>
+</tr>
+
+<tr>
+<td> <li>In 2002 MIT launched the OpenCourseWare (OCW) website: <a href="http://ocw.mit.edu/">ocw.mit.edu</a>.  The basic concept was to make educational material freely available to the public.  Since its inception many (over 200 or so) other universities have adopted the principles and created there own OCW projects.  See the <a href="http://www.ocwconsortium.org/">OpenCourseWare Consortium</a> website.  Here are a few of the many OCW sites: </li></td>
+</tr>
+
+<tr>
+<td>
+<a href="http://www.maths.ox.ac.uk/opencourseware/">Oxford University Mathematics OpenCouseWare</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://webcast.berkeley.edu/">Berkeley Webcast</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://ocw.uci.edu/">UC Irvine OpenCourseWare</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://ocw.nd.edu/">Notre Dame OpenCourseWare</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://oyc.yale.edu/">Open Yale courses</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://ocw.umb.edu/">UMass Boston OpenCourseWare</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://open.umich.edu/education//">Open.Michigan</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://ocw.tufts.edu/">Tufts OpenCourseWare</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="http://ocw.usu.edu/">Utah State OpenCourseWare</a>
+</td>
+</tr>
+
+
+<tr>
+<td><li> Another website which offers free online video lectures is <a href="http://academicearth.org/">Academic Earth</a>.  This site has just recently been launched (March 2009) and many of these lectures come from the OCW websites available. </li></td>
+</tr>
+<tr>
+<td><li> iTunes U, which is part of the iTunes Store is also another large collection of free educational media.</li></td>
+</tr>
+</table>
+</div>
+<br />
+
+
+<div class="info">
+<b>More specific links to Calculus I...</b>
+<table width="70%">
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+<tr>
+<td><li> <a href="http://www.stewartcalculus.com/media/7_home.php">Stewart Calculus</a>:  The website for our text.</li></td>
+</tr>
+
+<tr>
+<td> <li><a href="http://ocw.mit.edu/OcwWeb/Mathematics/18-01Fall-2006/CourseHome/index.htm">Single Variable Calculus (Fall 2006) @ MIT</a> (Has video lectures) </li></td>
+</tr>
+<tr>
+<td> <li><a href="http://ocw.mit.edu/OcwWeb/Mathematics/18-01Fall-2005/CourseHome/index.htm">Single Variable Calculus (Fall 2005) @ MIT</a></li> </td>
+</tr>
+<tr>
+<td> <li><a href="http://ocw.mit.edu/ans7870/resources/Strang/strangtext.htm">Calculus</a> by Gilbert Strang @ MIT OCW.</li> </td>
+</tr>
+<tr>
+<td> <li>Video lectures for <a href="http://www.math.armstrong.edu/faculty/hollis/calcvideos/">Single Variable Calculus @ Armstrong</a></li></td>
+</tr>
+<tr>
+<td> <li>Video lectures for <a href="http://www.math.ncsu.edu/calculus/web/videos.html">Analytic Geometry and Calculus I @ NCSU</a></li></td>
+</tr>
+
+<tr>
+<td><li> <a href="http://mathforum.org/calculus/calculus.html">The Math Forum @ Drexel</a> has a large database of calculus resources.</li></td>
+</tr>
+<tr>
+<td><li> <a href="http://www.math.temple.edu/~cow/">Calculus on the Web (COW)</a> is maintained Temple University.</li></td>
+</tr>
+<tr>
+<td><li> <a href="http://www.calculus.org/">The Calculus Page</a> contains many sample problems.</li></td>
+</tr>
+<tr>
+<td><li> University of British Columbia's <a href="http://www.ugrad.math.ubc.ca/coursedoc/math101/">calculus online</a> homepage.</li></td>
+</tr>
+<tr>
+<td><li> <a href="http://www.jtaylor1142001.net/">Aid for Calculus</a> contains many sample problems.</li></td>
+</tr>
+<tr>
+<td><li> <a href="http://www.math.hmc.edu/calculus/tutorials/">Math Tutorials</a> @ Harvey Mudd College.</li></td>
+</tr>
+<tr>
+<td><li> D.P. Story's <a href="http://www.math.uakron.edu/~dpstory/e-calculus.html">e-Calculus</a> @ Akron.</li></td>
+</tr>
+<tr>
+<td><li> <a href="http://www.calculus-help.com/problem.html">Kelley's Problem of the Week</a> was a website maintained from 1998-2003 to help AP Calculus students.</li></td>
+</tr>
+<tr>
+<td><li> <a href="http://integrals.wolfram.com/index.jsp">Integrator</a>, powered by Mathematica allows to check your indefinite integrals. (Warning! The arbitrary constant is assumed to be present in the answer so don't forget it!)  </li></td>
+</tr>
+<tr>
+<td><li> <a href="http://press.princeton.edu/video/banner/">The Calculus Lifesaver</a> by Adrian Banner (Princeton)</li></td>
+</tr>
+</table>
+</div>
+
+<br />
+
+
+<div class="footer">Page updated: September 8, 2009.</div>
+</div>
+</body>
+</html>
+

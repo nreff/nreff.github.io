@@ -1,0 +1,27 @@
+serveall=true
+
+file=ad6.pdf&content=application/pdf&title=File ad6.pdf
+file=ad8.tex&content=application/x-tex&title=File ad8.tex
+file=ad1.pdf&content=application/pdf&title=File ad1.pdf
+file=solX8d.tex&content=application/x-tex&title=File solX8d.tex
+file=ad7.aux&content=text/plain; charset=iso-8859-1&title=File ad7.aux
+file=ad8.log&content=text/plain; charset=iso-8859-1&title=File ad8.log
+file=ad8.aux&content=text/plain; charset=iso-8859-1&title=File ad8.aux
+file=21.2.pdf&content=application/pdf&title=File 21.2.pdf
+file=m304.css&content=text/css; charset=iso-8859-1&title=File m304.css
+file=ad1sol.pdf&content=application/pdf&title=File ad1sol.pdf
+file=ad7.pdf&content=application/pdf&title=File ad7.pdf
+file=index.html&content=text/html; charset=iso-8859-1&title=Math 304 - HW
+file=solX8d.log&content=text/plain; charset=iso-8859-1&title=File solX8d.log
+file=ad2sol.pdf&content=application/pdf&title=File ad2sol.pdf
+file=solX8d.aux&content=text/plain; charset=iso-8859-1&title=File solX8d.aux
+file=ad5sol.pdf&content=application/pdf&title=File ad5sol.pdf
+file=ad2.pdf&content=application/pdf&title=File ad2.pdf
+file=ad8.pdf&content=application/pdf&title=File ad8.pdf
+file=ad8sol.pdf&content=application/pdf&title=File ad8sol.pdf
+file=ad7.tex&content=application/x-tex&title=File ad7.tex
+file=ad7.log&content=text/plain; charset=iso-8859-1&title=File ad7.log
+file=h9sols.pdf&content=application/pdf&title=File h9sols.pdf
+file=ad5.pdf&content=application/pdf&title=File ad5.pdf
+file=solX8d.pdf&content=application/pdf&title=File solX8d.pdf
+file=ad6sol.pdf&content=application/pdf&title=File ad6sol.pdf

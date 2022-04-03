@@ -1,0 +1,52 @@
+
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\parindent}{0in}
+%\setlength{\parskip}{\baselineskip}
+\thispagestyle{empty}
+\usepackage{fullpage}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx}
+
+
+\newtheorem*{thm}{Theorem}
+
+\begin{document}
+
+%=======================================================
+\begin{center}
+{\large \bf Comments for Lecture 6}\\
+\bf{2.3.2010}
+\end{center}
+
+Start homework 2 as soon as possible!
+
+\begin{center}
+{\bf ``The Function"}.  
+\end{center}
+
+\noindent Given a system of linear equations with an $m \times n$ coefficient matrix $C$, the system looks like:
+
+\begin{align*}
+c_{11} x_1 + c_{12} x_2 + \ldots + c_{1n} x_n &= k_1 \\
+c_{21} x_1 + c_{22} x_2 + \ldots + c_{2n} x_n &= k_2 \\
+\vdots \hspace{3pc} \vdots \hspace{3pc} \vdots \hspace{3pc} &= \vdots \\
+c_{m1} x_1 + c_{m2} x_2 + \ldots + c_{mn} x_n &= k_m \\
+\end{align*}
+
+\noindent We talked about how we can actually think of this as a function.  The input here would be the $n$-{\it tuple}: ${\bf x} = (x_1,x_2,\ldots,x_n)$ and the output would be the $m$-{\it tuple}: ${\bf k} = (k_1,k_2,\ldots,k_m)$.  So now we think of $C$ as a function having domain $\mathbb{R}^n$ and codomain $\mathbb{R}^m$ written:
+
+\[C: \mathbb{R}^n \rightarrow \mathbb{R}^m \]
+
+\noindent (NOTE: The dimentions of $C$ as a matrix are $m\times n$)
+
+\noindent and we write
+
+\[C({\bf x})={\bf k} \] 
+
+\noindent As we discussed in class {\bf Theorem 1.6.2} was extremely nice because we were able to determine exactly when $C$ is {\it onto} and when it is {\it one-to-one}.  An amazing thing is that we can get this information for free when we compute {\it rank} of $C$!
+%=======================================================
+
+\end{document}

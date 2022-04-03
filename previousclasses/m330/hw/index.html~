@@ -1,0 +1,740 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head> 
+ 
+ 
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"> 
+<title>Math 330 - Homework</title> 
+ 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<style type="text/css"> 
+/*<![CDATA[*/
+@import "m330.css";
+/*]]>*/
+</style> 
+ 
+<style type="text/css"> 
+/*<![CDATA[*/
+ body {
+  background-color: #FFFFFF;
+ }
+ span.c1 {font-size: 80%}
+/*]]>*/
+</style> 
+</head><body> 
+<h1 class="mhead">Homework</h1> 
+<br> 
+<!--<div class="info2">
+<table>
+<tbody>
+<tr>
+<td><b>Prerequisite:</b> You <u>absolutely</u> must have a passing grade in MATH 222 (CALCULUS II) to be in this course.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>--> 
+
+<div class="info"> 
+<b>Homework Paper </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> <a href="HomeworkPage.pdf">With lines</a>. 
+</li> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+<li> <a href="HomeworkPageWithoutLines.pdf">Without lines</a>. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 1 - Due: Feb 2; Final Due Date: 15 Feb </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 1.8, 1.11(ii), 1.11(v). 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 2 - Due: Feb 3; Final Due Date: 16 Feb </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 1.16. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 3 - Due: Feb 6; Final Due Date: 17 Feb </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 1.22, 1.25(i), 1.25(ii). 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 4 - Due: Feb 8; Final Due Date: 22 Feb </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 1.27(ii). 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 5 - Due: Feb 9; Final Due Date: 22 Feb </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 2.6, 2.7(ii), 2.8. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 6 - Due: Feb 10; Final Due Date: 23 Feb </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 2.10, 2.12(iii). 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 7 - Due: Feb 13; Final Due Date: 27 Feb </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 2.18(iii), 2.20. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<p class="info2">Hint for 2.18(iii). Use the following lemma I proved in class:
+<strong>Lemma.</strong> $\forall k\in \mathbb{N}$, $k^2+k$ is even.
+</p>
+<div class="info3"> 
+<b>Homework 8 - Due: Feb 15; Final Due Date: 27 Feb </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 2.23, 2.27. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 9 - Due: Feb 16; Final Due Date: 29 Feb </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 2.33. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<p class="info2">Hint for 2.33. Consider the set $C:=\{a-b+1:a\in A\}$.  Show that $C$ is a nonempty subset of $\mathbb{N}$.  Then use the Well-Ordering Principle (Theorem 2.32) and use the smallest element of $C$ to find the smallest element of $A$.
+</p>
+
+<div class="info3"> 
+<b>Homework 10 - Due: Feb 22; Final Due Date: 2 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 4.5. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 11 - Due: Feb 23; Final Due Date: 7 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 4.7(i). 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<div class="info3"> 
+<b>Homework 12 - Due: Feb 27; Final Due Date: 8 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 4.13, 4.15(iii), 4.16(ii), 4.17. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+</div>
+
+
+<div class="info3"> 
+<b>Binomial Theorem Practice (You do not need to turn this in)</b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> Find the last term of $(x+2y)^5$.
+</li> 
+<li> Find the last term of $(x-2y)^5$.
+</li>
+<li> Find the third term of $(2x-3y)^9$.
+</li>
+<li> Prove: $\forall k\in \mathbb{Z}_{\geq 0}$, $\displaystyle \sum_{j=0}^k \binom{k}{j}2^j=3^k$.
+</li>
+<li> Prove: $\forall k\in \mathbb{Z}_{\geq 0}$, $\displaystyle \sum_{j=0}^k (-1)^j\binom{k}{j}=0$.
+</li>
+<li> Prove: let $x\in \mathbb{Z}$, $\forall k\in \mathbb{Z}_{\geq 0}$, $\displaystyle \sum_{j=0}^k \binom{k}{j}x^j=(1+x)^k$.
+</li>
+<li> Check out the <a href="http://en.wikipedia.org/wiki/Multinomial_theorem">Multinomial Theorem</a>.  The coefficients of the multinomial expansion can be realized by a generalized version of Pascal's Triangle to higher dimensions, called <a href="http://en.wikipedia.org/wiki/Pascal%27s_simplex">Pascal's simplex</a>.
+</li>
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<div class="info3"> 
+<b>Homework 13 - Due: Mar 2; Final Due Date: 15 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li> 4.30. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+</div>
+
+<div class="info3"> 
+<b>Homework 14 - Due: Mar 5; Final Due Date: 16 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  5.3(iii), 5.7. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 15 - Due: Mar 7; Final Due Date: 19 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  5.15. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info2"> 
+Hint for 5.15. Use the following:
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  $x\in A\cap B$ $\iff$ $x\in A$ and $x\in B$. 
+</li> 
+<li>  $x\in (A\cap B)^\text{c}$ $\iff$ $x\notin A\cap B$ $\iff$ $x\notin A$ or $x\notin B$. (Notice that this is the negation of: $x\in A$ and $x\in B$.) 
+</li> 
+<li>  $x\in A\cup B$ $\iff$ $x\in A$ or $x\in B$. 
+</li> 
+<li>  $x\in (A\cup B)^\text{c}$ $\iff$ $x\notin A\cup B$ $\iff$ $x\notin A$ and $x\notin B$. (Notice that this is the negation of: $x\in A$ or $x\in B$.) 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div>
+
+<br>
+<div class="info3"> 
+<b>Homework 16 - Due: Mar 8; Final Due Date: 21 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  5.20. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 17 - Due: Mar 12; Final Due Date: 23 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  6.5. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info2"> 
+Hint for 6.5. If $p$ and $q$ are statements, then to prove "$p$ OR $q$" you may use either of the following methods:
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  <b>Method 1</b>: suppose $p$ is false, and show $q$ must be true.
+</li> 
+<li>  <b>Method 2</b>: suppose $q$ is false, and show $p$ must be true. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+N.B.  You do not need to use both methods (just pick one!)!  Why do these methods work?  Also, what are some other methods to prove "$p$ OR $q$"?
+</div>
+</br>
+
+
+<div class="info3"> 
+<b>Homework 18 - Due: Mar 16; 1st Version Final Due Date: Mar 21; Rewrite Final Due Date: 29 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  6.15. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<div class="info3"> 
+<b>Homework 19 - Due: Mar 19; 1st Version Final Due Date: Mar 23; Rewrite Final Due Date: 30 Mar </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  6.20. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 20 - Due: Mar 26; 1st Version Final Due Date: Mar 29; Rewrite Final Due Date: 13 April </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  6.25. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<div class="info3"> 
+<b>Homework 21 - Due: Mar 29; 1st Version Final Due Date: April 12; Rewrite Final Due Date: 18 April </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  6.32, 6.35. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 22 - Due: April 12; 1st Version Final Due Date: April 16; Rewrite Final Due Date: 20 April </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  8.6, 8.40(ii), 8.43. 
+</li> 
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<div class="info3"> 
+<b>Homework 23 - Due: April 12; 1st Version Final Due Date: April 18; Rewrite Final Due Date: 25 April </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  8.50.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<div class="info3"> 
+<b>Homework 24 - Due: April 18; 1st Version Final Due Date: April 20; Rewrite Final Due Date: 30 April </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  9.11, 9.15.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<div class="info3"> 
+<b>Homework 25 - Due: April 19; 1st Version Final Due Date: April 23; Rewrite Final Due Date: 2 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  9.18.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 26 - Due: April 20; 1st Version Final Due Date: April 26; Rewrite Final Due Date: 3 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  10.7.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info3"> 
+<b>Homework 27 - Due: April 23; 1st Version Final Due Date: April 27; Rewrite Final Due Date: 4 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  10.9.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<div class="info"> 
+<b>Homework 28 - Due: April 25; 1st Version Final Due Date: April 30; Rewrite Final Due Date: 7 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  10.17.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info"> 
+<b>Homework 29 - Due: April 26; 1st Version Final Due Date: May 2; Rewrite Final Due Date: 9 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  10.21(i), 10.23(iii).
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info"> 
+<b>Homework 30 - Due: April 27; 1st Version Final Due Date: May 3; Rewrite Final Due Date: 10 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  10.27, 10.28, 11.2, 11.6.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<div class="info"> 
+<b>Homework 31 - Due: April 30; 1st Version Final Due Date: May 4; Rewrite Final Due Date: 11 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  11.12.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info"> 
+<b>Homework 32 - Due: May 2; 1st Version Final Due Date: May 4; Rewrite Final Due Date: 11 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  11.17.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info"> 
+<b>Homework 33 - Due: May 3; 1st Version Final Due Date: May 9; Rewrite Final Due Date: 11 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  11.25.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+<div class="info"> 
+<b>Homework 34 - Due: May 7; 1st Version Final Due Date: May 10; Rewrite Final Due Date: 11 May </b> 
+<table width="70%"> 
+<tbody><tr> 
+<th> </th> 
+<th> </th> 
+</tr> 
+<tr> 
+<td> 
+<li>  13.2.
+</td> 
+</tr> 
+</tbody></table> 
+</div> 
+<br>
+
+
+<a href="http://www.mathjax.org/">
+  <img title="Powered by MathJax"
+       src="http://www.mathjax.org/badge.gif"
+       border="0" alt="Powered by MathJax" />
+</a>
+
+<script type="text/javascript">
+var sc_project=7640674; 
+var sc_invisible=1; 
+var sc_security="920e95e8"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="customisable
+counter" href="http://statcounter.com/free-hit-counter/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/7640674/0/920e95e8/1/"
+alt="customisable counter"></a></div></noscript>
+
+</body></html> 
