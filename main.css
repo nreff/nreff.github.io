@@ -75,6 +75,20 @@ text-align : center;
 text-decoration : none;
 }
 
+.fa-brands {
+font-size: 40px 
+}
+.fa-brands:hover {
+color: gray;
+font-size: 40px 
+}
 
+.fa-solid {
+font-size: 40px 
+} 
+.fa-solid:hover {
+color: gray;
+font-size: 40px 
+} 
 
 
