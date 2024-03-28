@@ -38,36 +38,37 @@ text-align : center;
 font-family : times;
 margin-top : 0;
 margin-left: 0px;
+}.section {
+    color:#ffc726;
+    margin-left : 15px;
+    margin-right : 1px;
+    width : 711px; /* Adjusted from 711px to make it narrower */
+    background-color : #00533e;
+    border : 2px solid #668d3c;
+    padding-left : 1.2em;
+    padding-right : 1.85em;
+    padding-top : 2px;
+    padding-bottom : 2px;
+    font-family : times;
+    font-size : 150%;
 }
-.section {
-color:#ffc726;
-margin-left : 15px;
-margin-right : 1px;
-width : 711px;
-background-color : #00533e;
-border : 2px solid #668d3c;
-padding-left : 1.2em;
-padding-right : 1.85em;
-padding-top : 2px;
-padding-bottom : 2px;
-font-family : times;
-font-size : 150%;
-}
+
 .section b {
 font-variant : small-caps;
 font-weight : 300;
 }
 .sub {
-margin-left : 15px;
-margin-right : 1px;
-font-family : times;
-font-size : 100%;
-max-width : 1500px;
-padding-left : 1em;
-padding-right : 1em;
-padding-top : 0px;
-padding-bottom : 0px;
+    margin-left : 15px;
+    margin-right : 1px;
+    font-family : times;
+    font-size : 100%;
+    max-width : 711px; /* Adjusted to match the section width */
+    padding-left : 1em;
+    padding-right : 1em;
+    padding-top : 0px;
+    padding-bottom : 0px;
 }
+
 .sub td {
 text-align : center;
 }
